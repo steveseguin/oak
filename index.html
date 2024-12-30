@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oakridge Omni (OAK) - Meshtastic Node</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #3498db;
+            --text: #333;
+            --light: #ecf0f1;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .node-info {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .spec-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .image-placeholder {
+            background: var(--secondary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Oakridge Omni (OAK)</h1>
+        <p>Meshtastic Node - Mississauga, GTA</p>
+    </header>
+
+    <main>
+        <div class="node-info">
+            <h2>About This Node</h2>
+            <p>Welcome to the Oakridge Omni node, a part of the growing Meshtastic network in the Greater Toronto Area. This node serves as a communication point in the Mississauga area, helping to expand the mesh network's coverage and reliability.</p>
+        </div>
+
+        <div class="specs">
+            <div class="spec-item">
+                <h3>Hardware</h3>
+                <ul>
+                    <li>Device: Heltec ESP32 V3</li>
+                    <li>Antenna: 1.5m Omni</li>
+                    <li>Mount: Roof-mounted</li>
+                </ul>
+            </div>
+            
+            <div class="spec-item">
+                <h3>Location</h3>
+                <ul>
+                    <li>City: Mississauga</li>
+                    <li>Region: Greater Toronto Area</li>
+                    <li>Province: Ontario, Canada</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="image-placeholder">
+            <p>Node Setup Photo</p>
+            <!-- Replace with: <img src="path-to-your-image.jpg" alt="Oakridge Omni node setup" style="max-width: 100%; height: auto;"> -->
+        </div>
+
+        <section>
+            <h2>Join the Network</h2>
+            <p>If you're interested in Meshtastic and would like to contribute to the network's growth in the GTA, consider setting up your own node. The more nodes we have, the more resilient and useful the network becomes.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 meshcast.ca | Oakridge Omni Meshtastic Node</p>
+    </footer>
+</body>
+</html>
