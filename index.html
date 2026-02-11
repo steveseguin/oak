@@ -7,118 +7,248 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9IiNGRjAwMDAiLz4KICA8cGF0aCBkPSJNMTYgOCBBOCA4IDAgMCAxIDI0IDE2IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xNiAxMSBBNSA1IDAgMCAxIDIxIDE2IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xNiAyMGwtMi0yIDEtMS0xLTEgMS0xLTEtMmg0bC0xIDIgMSAxLTEgMSAxIDF6IiBmaWxsPSJ3aGl0ZSIvPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjIiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg=="/>
     <style>
         :root {
-            --primary: #c1272d;
-            --secondary: #9aa1a7d9;
-            --accent: #ffffff;
-            --text: #333;
-            --light: #f3f3f3;
-            --maple: #df4c44;
+            --red: #c1272d;
+            --red-light: #df4c44;
+            --bg: #0f1114;
+            --surface: #1a1d23;
+            --surface-border: #2a2d35;
+            --text: #e8e9eb;
+            --text-muted: #8b8f98;
+            --radius: 12px;
         }
-        
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
             color: var(--text);
+            background: var(--bg);
         }
 
         header {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--red) 0%, #8b1a1e 100%);
             color: white;
-            padding: 2rem;
+            padding: 4rem 2rem 3rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+            position: relative;
+        }
+
+        .signal-icon {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+            position: relative;
         }
 
         main {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2rem 1.5rem 4rem;
         }
 
-        .node-info {
-            background: var(--light);
-            border-radius: 8px;
-            padding: 1.5rem;
+        .about {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius);
+            padding: 2rem;
             margin: 2rem 0;
+        }
+
+        .about h2 {
+            color: var(--red-light);
+            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+        }
+
+        .about p {
+            color: var(--text-muted);
         }
 
         .specs {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
             margin: 2rem 0;
         }
 
         .spec-item {
-            background: white;
-            padding: 1rem;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-left: 3px solid var(--maple);
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            transition: border-color 0.2s;
         }
 
-        .image-placeholder {
-            background: var(--secondary);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            border-radius: 8px;
+        .spec-item:hover {
+            border-color: var(--red);
+        }
+
+        .spec-item h3 {
+            color: var(--red-light);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .spec-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .spec-item li {
+            padding: 0.3rem 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--surface-border);
+        }
+
+        .spec-item li:last-child {
+            border-bottom: none;
+        }
+
+        .node-image {
+            border-radius: var(--radius);
+            overflow: hidden;
             margin: 2rem 0;
+            border: 1px solid var(--surface-border);
         }
 
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+        .node-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
-        
-        .tech-info {
-            margin: 3rem 0;
+
+        section h2 {
+            color: var(--text);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
+            gap: 1.25rem;
+            margin-top: 1.25rem;
         }
 
         .info-card {
-            background: white;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
             padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-top: 3px solid var(--maple);
+            border-radius: var(--radius);
+            transition: border-color 0.2s;
+        }
+
+        .info-card:hover {
+            border-color: var(--red);
+        }
+
+        .info-card h3 {
+            color: var(--red-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .info-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         .button {
             display: inline-block;
-            background: var(--primary);
+            background: var(--red);
             color: white;
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
             margin-top: 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
         }
 
         .button:hover {
-            background: var(--maple);
+            background: var(--red-light);
+        }
+
+        .join {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .join h2 {
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+
+        .join p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: var(--surface);
+            border-top: 1px solid var(--surface-border);
+            color: var(--text-muted);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 3rem 1.5rem 2rem; }
+            header h1 { font-size: 2rem; }
+            main { padding: 1.5rem 1rem 3rem; }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Oakridge Omni (Oak)</h1>
-        <p>Meshtastic Node - Mississauga, GTA</p>
+        <svg class="signal-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="36" r="4" fill="white"/>
+            <path d="M16 28a12 12 0 0 1 16 0" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M10 22a20 20 0 0 1 28 0" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M4 16a28 28 0 0 1 40 0" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+        </svg>
+        <h1>Oakridge Omni</h1>
+        <p>Meshtastic Node &mdash; Mississauga, GTA</p>
     </header>
 
     <main>
-        <div class="node-info">
+        <div class="about">
             <h2>About This Node</h2>
-            <p>Welcome to the Oakridge Omni node, a part of the growing Meshtastic network in the Greater Toronto Area. This node serves as a communication point in the south Mississauga area, helping to expand the mesh network's coverage and reliability.</p>
+            <p>Welcome to the Oakridge Omni node, part of the growing Meshtastic network in the Greater Toronto Area. This node serves as a communication point in south Mississauga, helping expand the mesh network's coverage and reliability.</p>
         </div>
 
         <div class="specs">
@@ -130,7 +260,6 @@
                     <li>Mount: Mast-mounted</li>
                 </ul>
             </div>
-            
             <div class="spec-item">
                 <h3>Location</h3>
                 <ul>
@@ -141,54 +270,53 @@
             </div>
         </div>
 
-        <div class="image-placeholder">
-            <img src="https://github.com/user-attachments/assets/e6f03d00-4bbd-4685-bcd8-aab7a4eca12f" alt="Oakridge Omni node setup" style="max-width: 100%; height: auto;">
+        <div class="node-image">
+            <img src="https://github.com/user-attachments/assets/e6f03d00-4bbd-4685-bcd8-aab7a4eca12f" alt="Oakridge Omni node setup" loading="lazy">
+        </div>
+
+        <div class="specs">
+            <div class="spec-item">
+                <h3>RF Equipment</h3>
+                <ul>
+                    <li>Cable: LMR-600 N-Type Male to N-Type Male (6ft)</li>
+                    <li>Antenna: Barracuda 915MHz 8dBi Omni-Directional</li>
+                    <li>Frequency: 906.875 MHz (NA)</li>
+                </ul>
+            </div>
+            <div class="spec-item">
+                <h3>Technical Details</h3>
+                <ul>
+                    <li>Protocol: LoRa Spread Spectrum</li>
+                    <li>Range: Up to 20km line of sight</li>
+                    <li>Power: USB-C powered with battery backup</li>
+                    <li>Enclosure: LeMotech Junction Box, 4.7"x3.5"x2.7"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="join">
+            <h2>Join the Network</h2>
+            <p>Interested in Meshtastic? Consider setting up your own node. The more nodes we have, the more resilient and useful the network becomes.</p>
         </div>
 
         <section>
-            <h2>Join the Network</h2>
-            <p>If you're interested in Meshtastic and would like to contribute to the network's growth in the GTA, consider setting up your own node. The more nodes we have, the more resilient and useful the network becomes.</p>
-        </section>
-        
-    
-         <div class="specs">
-                <div class="spec-item">
-                    <h3>RF Equipment</h3>
-                    <ul>
-                        <li>Cable: LMR-600 N-Type Male to N-Type Male (6ft)</li>
-                        <li>Antenna: Barracuda 915MHz 8dBi Omni-Directional</li>
-                        <li>Frequency: 906.875 MHz (NA)</li>
-                    </ul>
+            <h2>About the Technology</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Meshtastic</h3>
+                    <p>An open-source communications platform that uses inexpensive LoRa radios to create long-range mesh networks. Perfect for hiking, emergency comms, or building community networks.</p>
+                    <a href="https://meshtastic.org" class="button">Learn More</a>
                 </div>
-                
-                <div class="spec-item">
-                    <h3>Technical Details</h3>
-                    <ul>
-                        <li>Protocol: LoRa Spread Spectrum</li>
-                        <li>Range: Up to 20km line of sight</li>
-                        <li>Power: USB-C powered with battery backup</li>
-                        <li>Enclosure: LeMotech Junction Box, 4.7"x3.5"x2.7"</li>
-                    </ul>
+                <div class="info-card">
+                    <h3>ESP32 & LoRa</h3>
+                    <p>The Heltec ESP32 V3 combines WiFi, Bluetooth, and LoRa capabilities in one compact device. LoRa technology enables long-range, low-power wireless communication perfect for mesh networking.</p>
                 </div>
             </div>
-    
-            <section class="tech-info">
-                <h2>About the Technology</h2>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>Meshtastic</h3>
-                        <p>An open-source communications platform that uses inexpensive LoRa radios to create long-range mesh networks. Perfect for hiking, emergency comms, or building community networks.</p>
-                        <a href="https://meshtastic.org" class="button">Learn More</a>
-                    </div>
-                    <div class="info-card">
-                        <h3>ESP32 & LoRa</h3>
-                        <p>The Heltec ESP32 V3 combines WiFi, Bluetooth, and LoRa capabilities in one compact device. LoRa technology enables long-range, low-power wireless communication perfect for mesh networking.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
+        </section>
+    </main>
+
     <footer>
-        <p>© 2024 meshcast.ca | Oakridge Omni Meshtastic Node</p>
+        &copy; 2026 meshcast.ca | Oakridge Omni Meshtastic Node
     </footer>
 </body>
 </html>
