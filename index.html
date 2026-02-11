@@ -227,6 +227,27 @@
             font-size: 0.9rem;
         }
 
+        /* Animations */
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header h1 { animation: fade-up 0.6s ease-out; }
+        header p { animation: fade-up 0.6s ease-out 0.1s both; }
+        .about { animation: fade-up 0.6s ease-out 0.2s both; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (max-width: 600px) {
             header { padding: 3rem 1.5rem 2rem; }
             header h1 { font-size: 2rem; }
@@ -252,7 +273,7 @@
             <p>A LoRa radio strapped to a mast in south Mississauga, shouting into the void on 906.875 MHz. Part of the growing Meshtastic mesh in the GTA. It relays messages, it doesn't judge.</p>
         </div>
 
-        <div class="specs">
+        <div class="specs reveal">
             <div class="spec-item">
                 <h3>Hardware</h3>
                 <ul>
@@ -271,11 +292,11 @@
             </div>
         </div>
 
-        <div class="node-image">
+        <div class="node-image reveal">
             <img src="https://github.com/user-attachments/assets/e6f03d00-4bbd-4685-bcd8-aab7a4eca12f" alt="Oakridge Omni node setup" loading="lazy">
         </div>
 
-        <div class="specs">
+        <div class="specs reveal">
             <div class="spec-item">
                 <h3>RF Equipment</h3>
                 <ul>
@@ -295,14 +316,14 @@
             </div>
         </div>
 
-        <div class="join">
+        <div class="join reveal">
             <h2>Join the Network</h2>
             <p>The mesh gets better with every node. You don't need permission. Buy a radio, flash the firmware, stick it somewhere high. That's the whole onboarding process.</p>
         </div>
 
         <section>
             <h2>About the Technology</h2>
-            <div class="info-grid">
+            <div class="info-grid reveal">
                 <div class="info-card">
                     <h3>Meshtastic</h3>
                     <p>An open-source communications platform that uses inexpensive LoRa radios to create long-range mesh networks. Perfect for hiking, emergency comms, or building community networks.</p>
@@ -319,5 +340,11 @@
     <footer>
         &copy; 2026 meshcast.ca | Oakridge Omni Meshtastic Node
     </footer>
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
