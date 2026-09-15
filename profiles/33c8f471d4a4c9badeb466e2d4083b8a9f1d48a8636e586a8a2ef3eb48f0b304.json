@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "protocol": "meshcore",
+  "public_key": "33c8f471d4a4c9badeb466e2d4083b8a9f1d48a8636e586a8a2ef3eb48f0b304",
+  "display_name": "Oak Roof",
+  "bio": "Heltec V4 MeshCore repeater in south Mississauga, GTA. Barracuda 915 MHz 8 dBi omni.",
+  "avatar_url": "https://meshcast.ca/assets/icon.svg",
+  "links": [
+    {
+      "label": "Meshcast",
+      "url": "https://meshcast.ca/"
+    }
+  ],
+  "verification": {
+    "status": "site-maintained",
+    "note": "Maintained by this site. No automated or cryptographic ownership verification."
+  },
+  "updated_at": "2026-09-15"
+}
