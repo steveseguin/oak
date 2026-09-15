@@ -7,14 +7,22 @@
 </head><body>
 <header class="topbar"><a class="brand" href="./">meshcast<span>.ca</span></a><nav aria-label="Main"><a href="#roof">Oak Roof</a><a href="profiles.html">Node profiles</a><a href="connect.html">LoRa Connect</a><a href="radio.html">Radio tools</a></nav></header>
 <main>
-<section class="hero"><p class="eyebrow">MISSISSAUGA / GREATER TORONTO AREA</p><h1>Small radio.<br>More connections.</h1><p class="lead">A rooftop MeshCore repeater and a few experiments in what you can do with a very small message.</p><div class="actions"><a class="button" href="#roof">Meet Oak Roof</a><a class="button secondary" href="connect.html">Try LoRa Connect</a></div><p class="hero-foot">Messages over LoRa. People on the other end.</p></section>
-<section id="roof" class="section"><div class="section-heading"><p class="eyebrow">THE LOCAL REPEATER</p><h2>Oak Roof</h2><p>A LoRa radio on a mast in south Mississauga, relaying MeshCore messages around the GTA. It relays messages. It doesn&apos;t judge.</p></div>
-<div class="grid"><article class="card"><h3>On the roof</h3><dl><div><dt>Radio</dt><dd>Heltec V4</dd></div><div><dt>Firmware role</dt><dd>MeshCore repeater</dd></div><div><dt>Antenna</dt><dd>Barracuda 915 MHz, 8 dBi omni</dd></div><div><dt>Mount</dt><dd>Mast-mounted</dd></div></dl></article><article class="card"><h3>On the air</h3><dl><div><dt>Frequency</dt><dd>910.525 MHz</dd></div><div><dt>Modem</dt><dd>62.5 kHz &middot; SF7 &middot; CR5 (4/5)</dd></div><div><dt>Scope</dt><dd>#gta &middot; Peel region</dd></div><div><dt>Paths</dt><dd>3-byte repeater IDs</dd></div></dl></article></div>
-<p class="note">These are the configured settings, not a live status feed. Range depends on height, terrain, antennas and local noise. No exact home location is published.</p><a class="text-link" href="profiles.html#33c8f471d4a4c9badeb466e2d4083b8a9f1d48a8636e586a8a2ef3eb48f0b304">View Oak Roof&apos;s profile</a></section>
-<section class="section"><div class="section-heading"><p class="eyebrow">BROWSER TOOLS</p><h2>Give a small packet somewhere to go.</h2><p>No account required. Each tool tells you what stays local and what uses the Internet.</p></div><div class="grid tools">
-<article class="card"><span class="number">01 / PEOPLE</span><h3>Node profiles</h3><p>Look up a full MeshCore public key to find an opt-in profile, avatar and social links. Create a profile submission for other apps to use.</p><a class="button secondary" href="profiles.html">Look up a node</a></article>
-<article class="card"><span class="number">02 / CONNECTIONS</span><h3>LoRa Connect</h3><p>Exchange a VDO.Ninja connection offer and answer as small radio messages. Once connected, chat and video travel over the Internet.</p><a class="button secondary" href="connect.html">Start a connection</a></article>
-<article class="card"><span class="number">03 / YOUR RADIO</span><h3>Radio tools</h3><p>Connect your own companion radio with the MeshCore web client, or open Oak Mesh if you already run its local collector.</p><a class="button secondary" href="radio.html">Choose a client</a></article></div></section>
-<section class="section join"><p class="eyebrow">JOIN THE MESH</p><h2>A little height goes a long way.</h2><p>Start with a supported radio running MeshCore companion firmware. Use a repeater for infrastructure, and match the local radio settings before expecting to hear anyone.</p><div class="actions"><a class="button" href="https://meshcore.co.uk/">Get MeshCore</a><a class="button secondary" href="https://meshcore.ca/config/">Canadian radio settings</a></div></section>
+<section class="hero" id="roof">
+  <h1>Oak Roof</h1>
+  <p class="lead">A MeshCore repeater in south Mississauga, Ontario.</p>
+  <p>Heltec V4 with a Barracuda 915 MHz, 8 dBi omnidirectional antenna.</p>
+</section>
+<figure class="antenna-photo">
+  <img src="assets/antenna-photo.png" alt="The antenna and mast at Oak Roof, with the mesh antenna highlighted in green" width="528" height="675" fetchpriority="high">
+  <figcaption>Oak Roof antenna and mast.</figcaption>
+</figure>
+<section class="section"><h2>Radio details</h2>
+<div class="grid"><article class="card"><h3>Hardware</h3><dl><div><dt>Radio</dt><dd>Heltec V4</dd></div><div><dt>Firmware role</dt><dd>MeshCore repeater</dd></div><div><dt>Antenna</dt><dd>Barracuda 915 MHz, 8 dBi omni</dd></div><div><dt>Mount</dt><dd>Mast-mounted</dd></div></dl></article><article class="card"><h3>Radio settings</h3><dl><div><dt>Frequency</dt><dd>910.525 MHz</dd></div><div><dt>Modem</dt><dd>62.5 kHz &middot; SF7 &middot; CR5 (4/5)</dd></div><div><dt>Scope</dt><dd>#gta &middot; Peel region</dd></div><div><dt>Paths</dt><dd>3-byte repeater IDs</dd></div></dl></article></div>
+<p class="note">Configured settings; live status is unavailable.</p><a class="text-link" href="profiles.html#33c8f471d4a4c9badeb466e2d4083b8a9f1d48a8636e586a8a2ef3eb48f0b304">View Oak Roof&apos;s profile</a></section>
+<section class="section"><div class="section-heading"><h2>MeshCore tools</h2></div><div class="grid tools">
+<article class="card"><h3>Node profiles</h3><p>Look up a full MeshCore public key to find an opt-in profile, avatar and social links. Create a profile submission for other apps to use.</p><a class="button secondary" href="profiles.html">Look up a node</a></article>
+<article class="card"><h3>LoRa Connect</h3><p>Exchange a VDO.Ninja connection offer and answer as small radio messages. Once connected, chat and video travel over the Internet.</p><a class="button secondary" href="connect.html">Start a connection</a></article>
+<article class="card"><h3>Radio tools</h3><p>Connect your own companion radio with the MeshCore web client, or open Oak Mesh if you already run its local collector.</p><a class="button secondary" href="radio.html">Choose a client</a></article></div></section>
+<section class="section join"><h2>Getting started with MeshCore</h2><div class="actions"><a class="button" href="https://meshcore.co.uk/">Get MeshCore</a><a class="button secondary" href="https://meshcore.ca/config/">Canadian radio settings</a></div></section>
 </main><footer><p>Meshcast &middot; MeshCore in the GTA</p><a href="https://github.com/steveseguin/oak">Source &amp; contributions</a><a href="profiles.html#developers">Profile data for apps</a></footer>
 </body></html>
