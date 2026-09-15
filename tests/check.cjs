@@ -58,7 +58,7 @@ async function main() {
     const ids=[...text.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
     for(const match of text.matchAll(/\b(?:href|src)="([^"]*)"/g)) {
       const value=match[1];if(!value || /^(https?:|data:)/.test(value))continue;
-      const [pathname,hash]=value.split('#'),target=path.resolve(root,path.dirname(file),pathname || path.basename(file));
+      const [resource,hash]=value.split('#'),pathname=resource.split('?')[0],target=path.resolve(root,path.dirname(file),pathname || path.basename(file));
       const actual=fs.existsSync(target) && fs.statSync(target).isDirectory()?path.join(target,'index.html'):target;
       assert.ok(fs.existsSync(actual),file+' missing '+value);
       if(hash && !/^[a-f0-9]{64}$/.test(hash))assert.ok(fs.readFileSync(actual,'utf8').includes('id="'+hash+'"'),file+' missing anchor '+value);
