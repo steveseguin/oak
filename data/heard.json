@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789602024,
+  "published_at": 1789602923,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -567,6 +567,13 @@
       "position": [
         43.66375,
         -79.3753
+      ]
+    },
+    {
+      "name": "Mr fUggly repeater",
+      "position": [
+        43.02287,
+        -79.24391
       ]
     },
     {
@@ -1335,6 +1342,11 @@
   ],
   "messages": [
     {
+      "name": "🆒️TP-Subcooled",
+      "text": "Evening !",
+      "received_at": 1789602480
+    },
+    {
       "name": "Fuzz Factor GO",
       "text": "@[Bobabate 🅱️] Loon and Third Line adverts came in. :)",
       "received_at": 1789601940
@@ -1828,26 +1840,6 @@
       "name": "Krycek",
       "text": "@[KH79S] Copied on the NNE shore of Lake Ontario.",
       "received_at": 1789517520
-    },
-    {
-      "name": "KH79S",
-      "text": "Just got my first radio and apparently it works!",
-      "received_at": 1789516380
-    },
-    {
-      "name": "Sevierville Tower Node",
-      "text": "@[Pige0n | G3-Remote] 👉",
-      "received_at": 1789516380
-    },
-    {
-      "name": "MeshNerd🤓",
-      "text": "@[CanadianButter] I see you",
-      "received_at": 1789516260
-    },
-    {
-      "name": "CanadianButter",
-      "text": "Also testing my repeater. Just on the windowsill rn, will go on the roof when it’s safer.",
-      "received_at": 1789516200
     }
   ]
 }
