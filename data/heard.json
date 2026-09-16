@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789601763,
+  "published_at": 1789602024,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -203,6 +203,13 @@
       "position": [
         44.03872,
         -77.76737
+      ]
+    },
+    {
+      "name": "BuffaLoRa.org SnyderMes",
+      "position": [
+        42.96522,
+        -78.7782
       ]
     },
     {
@@ -1327,6 +1334,11 @@
     }
   ],
   "messages": [
+    {
+      "name": "Fuzz Factor GO",
+      "text": "@[Bobabate 🅱️] Loon and Third Line adverts came in. :)",
+      "received_at": 1789601940
+    },
     {
       "name": "VE3VVZ",
       "text": "Good evening from Toronto to all.   Community will grow no doubt.",
