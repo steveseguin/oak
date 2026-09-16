@@ -50,7 +50,7 @@ async function main() {
     profiles.validate(record,entry.public_key);
   }
   // Check every authored page's local assets and link targets, including anchors.
-  const pages=['index.html','profiles.html','connect.html','radio.html','call/index.html'];
+  const pages=['index.html','profiles.html','connect.html','radio.html','call/index.html','heard.html'];
   for(const file of pages) {
     const text=fs.readFileSync(path.join(root,file),'utf8');
     assert.doesNotMatch(text,/Oakridge|Meshtastic|906\.875|ESP32 V3/);

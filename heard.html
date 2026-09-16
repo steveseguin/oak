@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heard on mesh · Meshcast</title>
+<meta name="description" content="Public MeshCore radio locations and messages received in the GTA.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://meshcast.ca/heard.html">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css?v=20260914-white">
+<link rel="stylesheet" href="assets/vendor/leaflet.css">
+<link rel="stylesheet" href="assets/heard.css?v=1">
+<script defer src="assets/vendor/leaflet.js"></script>
+<script defer src="assets/heard-core.js"></script>
+<script defer src="assets/heard.js?v=1"></script>
+</head><body class="heard-page">
+<header class="topbar"><a class="brand" href="./">meshcast<span>.ca</span></a><nav aria-label="Main"><a href="heard.html" aria-current="page">Heard on mesh</a><a href="index.html#roof">Oak Roof</a><a href="profiles.html">Node profiles</a><a href="connect.html">LoRa Connect</a><a href="radio.html">Radio tools</a></nav></header>
+<main class="heard-main">
+  <div class="heard-heading"><h1>Heard on mesh</h1><p id="freshness" class="note" role="status">Loading snapshot…</p></div>
+  <div class="heard-tabs" role="tablist" aria-label="Public activity">
+    <button id="map-tab" type="button" role="tab" aria-selected="true" aria-controls="map-panel">Map</button>
+    <button id="chat-tab" type="button" role="tab" aria-selected="false" aria-controls="chat-panel" tabindex="-1">Public chat</button>
+  </div>
+  <section id="map-panel" role="tabpanel" aria-labelledby="map-tab">
+    <div class="map-toolbar"><label class="search-label" for="node-search">Find a node</label><input id="node-search" type="search" placeholder="Find a node" autocomplete="off"><button id="gta" class="secondary" type="button">GTA</button><button id="all-nodes" class="secondary" type="button" disabled>All nodes</button></div>
+    <p id="map-status" class="note" role="status"></p>
+    <div id="public-map" aria-label="Publicly advertised radio locations"></div>
+    <p id="tiles-status" class="note" role="status" hidden>Map background unavailable. Radio markers still work.</p>
+    <details class="node-directory"><summary id="node-count">Nodes</summary><ul id="node-list"></ul></details>
+    <p class="note">Advertised locations · past 7 days. Local Oak radios are excluded.</p>
+  </section>
+  <section id="chat-panel" role="tabpanel" aria-labelledby="chat-tab" hidden>
+    <p class="note chat-note">Public channel · latest received first · past 24 hours</p>
+    <div id="messages"></div>
+    <p class="note">Names are self-reported. Signal and hop reports are omitted.</p>
+  </section>
+  <noscript><p>Enable JavaScript to view the map and public messages.</p></noscript>
+</main>
+<footer><p>Meshcast · MeshCore in the GTA</p><a href="https://github.com/steveseguin/oak">Source &amp; contributions</a></footer>
+</body></html>

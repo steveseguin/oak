@@ -16,12 +16,17 @@ hosted API, database, login service, cloud worker or radio gateway.
   iframe and STUN/TURN handling remain intact. Includes a direct-open fallback.
 - `radio.html`: links to the MeshCore browser client and an existing local
   Oak Mesh installation. There is no public copy of Steve's private collector.
+- `heard.html`: read-only map and Public-channel messages from a filtered static
+  snapshot. Defaults to the GTA, with node search and a separate chat tab.
+  See [public feed](docs/public-feed.md).
 
 ## Data and privacy
 
-Only Oak Roof's intended public identity is seeded. No household channel keys,
+Only Oak Roof's intended public identity is seeded in the profile directory. No household channel keys,
 private identities, Bluetooth PINs, private radio history or home coordinates
-are included. Profile lookup is explicitly opt-in. Profile fields and radio
+are included. The map excludes every local Oak radio and only uses positions
+advertised by other radios. Its snapshot has no keys, routes, hops, signal
+readings, receiver position or distances. Profile lookup is explicitly opt-in. Profile fields and radio
 codes are rendered as text; links must be HTTPS without embedded credentials.
 
 Profiles and avatars are public Internet data. Third-party avatar servers can
@@ -45,6 +50,7 @@ Run sequential offline checks with Node 22+:
 
 ```sh
 node tests/check.cjs
+node tests/heard.cjs
 node --check assets/profile-core.js
 node --check assets/profiles.js
 node --check assets/mesh-packets.js
