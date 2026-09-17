@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789632624,
+  "published_at": 1789633524,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1326,6 +1326,13 @@
       ]
     },
     {
+      "name": "⚡️ GTN 99",
+      "position": [
+        44.25672,
+        -76.95469
+      ]
+    },
+    {
       "name": "⚡️ GTN South Shore",
       "position": [
         44.08088,
@@ -2204,6 +2211,14 @@
   },
   "arrivals": [
     {
+      "name": "⚡️ GTN 99",
+      "position": [
+        44.25672,
+        -76.95469
+      ],
+      "first_seen": 1789633140
+    },
+    {
       "name": "Mesh Pickering 1",
       "position": [
         43.82893,
@@ -2242,18 +2257,10 @@
         -77.6102
       ],
       "first_seen": 1789626540
-    },
-    {
-      "name": "iRepeat🤘",
-      "position": [
-        45.5115,
-        -75.45919
-      ],
-      "first_seen": 1789626240
     }
   ],
   "locations": {
-    "mapped": 213,
+    "mapped": 214,
     "unknown": 45
   }
 }
