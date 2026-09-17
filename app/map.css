@@ -136,39 +136,3 @@ body.map-active .map-node-panel { display:block; min-height:0; overflow:auto; pa
   #map-node-content { padding:12px; }
   .map-corner > summary { min-height:44px; padding:10px; }
 }
-@media (prefers-color-scheme: dark) {
-  .view-switch button { color: var(--ink); background: #29382f; border-color: #657970; }
-  .view-switch button[aria-pressed="true"] { background: #355641; border-color: #86d6b3; }
-  .view-switch button:hover { outline-color: #86d6b3; }
-  #map-view, #map-routes, .map-activity-note { background: #1b2320; color: var(--ink); }
-  #node-map { background: #182528; color: var(--ink); }
-  /* Only the saved basemap image changes; radio markers and paths keep their colors. */
-  #node-map .leaflet-image-layer { filter: invert(1) hue-rotate(180deg) brightness(.8) saturate(.65); }
-  .map-toolbar, .map-legend, #map-routes, #map-missing, .map-credit, .map-corner-body,
-  .map-popup-links { border-color: #657970; }
-  .map-toolbar button, .map-toolbar select, .map-popup button { background: #29382f; color: var(--ink); border-color: #81988b; }
-  .map-link-legend, .map-selection, .map-attribution { background: #293630; color: var(--ink); border-color: #657970; }
-  .map-link-label, #map-count { color: var(--ink); }
-  body.map-active .map-node-panel, .map-corner { background: #202925; color: var(--ink); border-color: #657970; }
-  .map-corner > summary:focus-visible, #node-map:focus-visible { outline-color: #86d6b3; }
-  .legend-ours, .activity-active { color: #96dfa9; }
-  .legend-peer { color: #9dceff; }
-  .activity-quiet { color: #f3d28e; }
-  .activity-inactive { color: #c4cdd4; }
-  .map-link-legend .key-relay::before { border-color: #cba5ee; }
-  .map-link-legend .key-direct::before { border-color: #96dfa9; }
-  #node-map path.leaflet-interactive[stroke="#17683e"] { stroke: #96dfa9; }
-  #node-map path.leaflet-interactive[stroke="#70459a"] { stroke: #cba5ee; }
-  .radio-map-marker:focus-visible .map-marker-symbol { outline-color: #fff; }
-  #node-map .radio-map-label, #node-map .leaflet-tooltip { color: var(--ink); background: #202925; border-color: #81988b; box-shadow: 0 1px 4px #0008; }
-  #node-map .leaflet-tooltip-right::before { border-right-color: #202925; }
-  #node-map .leaflet-tooltip-left::before { border-left-color: #202925; }
-  #node-map .leaflet-popup-content-wrapper, #node-map .leaflet-popup-tip { background: #202925; color: var(--ink); }
-  #node-map .leaflet-popup-content, #node-map .leaflet-popup-close-button { color: var(--ink); }
-  #node-map .leaflet-control-zoom a { color: var(--ink); background: #202925; border-color: #657970; }
-  #node-map .leaflet-control-zoom a:hover { background: #344a3e; }
-  #node-map .leaflet-control-zoom a.leaflet-disabled { color: #82958a; background: #202925; }
-  #node-map .leaflet-control-scale-line { color: var(--ink); background: #202925; border-color: #81988b; text-shadow: none; }
-  #node-map .leaflet-control-attribution { background: #202925; color: #bbcbbf; }
-  #node-map .leaflet-control-attribution a { color: #a9dbc8; }
-}

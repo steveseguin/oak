@@ -8,10 +8,10 @@
   <title>Oak Mesh</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sidebar.css"><link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="map.css">
   <script src="vendor/leaflet.js" defer></script><script src="map.js" defer></script>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src https: http://127.0.0.1:* http://localhost:* http://[::1]:*; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"><link rel="stylesheet" href="hosted.css"><script type="module" src="connect-launch.mjs"></script></head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src https: http://127.0.0.1:* http://localhost:* http://[::1]:*; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"><link rel="stylesheet" href="hosted.css"><link id="dark-theme" rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)"><script src="theme.js"></script><script type="module" src="connect-launch.mjs"></script></head>
 <body>
 <section id="connection-setup" aria-label="Choose a connection">
-<a href="../">meshcast.ca</a><h1>Oak Mesh</h1><p>Choose how to connect.</p>
+<div class="connection-top"><a href="../">meshcast.ca</a><select class="theme-choice" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></div><h1>Oak Mesh</h1><p>Choose how to connect.</p>
 <div class="connection-card"><h2>Portable radio</h2><div class="device-choices"><button id="choose-bluetooth" type="button" disabled>Bluetooth</button><button id="choose-usb" type="button" disabled>USB Serial</button></div>
 <p id="bluetooth-note">Choose a companion radio nearby. Disconnect other apps from it first.</p><p id="usb-note">USB needs companion USB firmware and a supported browser.</p><p>History stays in this browser, separately for each radio. Keep the page open to receive messages.</p></div>
 <div class="connection-card"><h2>Server</h2><form id="server-form"><label for="server-url">Server address</label><input id="server-url" type="url" value="http://127.0.0.1:8765" required autocomplete="off" spellcheck="false"><label for="server-key">Website access key</label><input id="server-key" type="password" required autocomplete="off"><button id="server-connect" type="submit" disabled>Connect to server</button></form>
@@ -21,7 +21,7 @@
 <div class="workspace" hidden>
 <aside class="sidebar" aria-label="Conversations">
   <h1 class="sr-only">Oak Mesh messages</h1>
-  <button id="change-connection" type="button" class="quiet">Change connection</button><nav class="view-switch" aria-label="Workspace view"><button id="view-messages" type="button" aria-pressed="true">Messages</button><button id="view-map" type="button" aria-pressed="false">Map</button><button id="details-toggle" type="button" class="quiet mobile-details" aria-controls="radio-panel" aria-expanded="false">Details</button></nav>
+  <div class="app-tools"><button id="change-connection" type="button" class="quiet">Change connection</button><select class="theme-choice" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></div><nav class="view-switch" aria-label="Workspace view"><button id="view-messages" type="button" aria-pressed="true">Messages</button><button id="view-map" type="button" aria-pressed="false">Map</button><button id="details-toggle" type="button" class="quiet mobile-details" aria-controls="radio-panel" aria-expanded="false">Details</button></nav>
   <button id="directory-toggle" type="button" aria-controls="conversation-directory" aria-expanded="false"><span id="directory-name">Channel</span><span aria-hidden="true">⌄</span></button>
   <div id="conversation-directory">
   <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search messages" aria-label="Search saved messages"></label>

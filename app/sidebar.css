@@ -200,33 +200,7 @@ button:disabled { color: #40513f; }
 .add-channel input { width: 100%; min-width: 0; font: inherit; color: #293a28; background: white; border: 1px solid #6a7b64; border-radius: 4px; padding: 8px; }
 .add-channel button { margin-top: 6px; font-size: 16px; }
 .add-channel p { margin: 6px 0; overflow-wrap: anywhere; }
-@media (prefers-color-scheme: dark) {
-  .context-deck { --card-paper:#35483e; --card-edge:#8eaa99; }
-  .age-cue.age-read { color:#bac1bd; }
-  .sidebar .section-label, .node-details { background: #303c39; border-color: #657970; }
-  .sidebar .node-item { background: #202925; border-bottom-color: #45574c; }
-  .sidebar .nav-item:hover:not(:disabled), .sidebar .nav-item:focus-visible { background: #344a3e; }
-  .sidebar .nav-item.selected { background: #355641; }
-  .sidebar .nav-item.selected:hover:not(:disabled), .sidebar .nav-item.selected:focus-visible { background: #41664f; }
-  .sidebar .nav-item:active:not(:disabled) { background: #496c55; }
-  .node-badge { background: #303d32; border-color: #6c806c; }
-  .node-badge.owned { background: #33503b; border-color: #7ba383; }
-  .node-detail-body { background: #202925; border-color: #657970; }
-  .node-public-key { border-color: #657970; }
-  .message.in .bubble, .message.out .bubble, .message-mention, .context-message {
-    color: var(--ink); background: hsl(var(--sender-hue) var(--sender-saturation-dark) var(--sender-lightness-dark));
-    border-color: hsl(var(--sender-hue) 22% 46%);
-  }
-  #connection-banner.connected { background: #293f4c; border-bottom-color: #64879a; }
-  .roof-status { background: #3a3121; color: #f2dfb7; border-bottom-color: #8c7448; }
-  .roof-status.recent { background: #263b30; color: var(--ink); border-bottom-color: #65866e; }
-  input::placeholder, textarea::placeholder { color: #bbcbbf; }
-  button:disabled { color: #bbcbbf; }
-  .primary:disabled { background: #303d35; border-color: #60776a; }
-  .primary:not(:disabled) { color: #10251b; }
-  .add-channel { color: var(--ink); }
-  .add-channel input { color: var(--ink); background: #141c18; border-color: #65866e; }
-}
+
 
 /* Keep conversation and connection information beside the chat. */
 .block-settings { margin:0 16px 12px; font-size:16px; color:var(--ink); }
