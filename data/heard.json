@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789686624,
+  "published_at": 1789687524,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1601,6 +1601,76 @@
   ],
   "messages": [
     {
+      "name": "Beam",
+      "text": "@[VIRUS CORE 1W] as well as can be...good to be back ...and see the mesh has been meshing along.",
+      "received_at": 1789687440
+    },
+    {
+      "name": "Beam",
+      "text": "@[Fuzz Factor] nice...i put solar panel in them hoping it keeps charged.",
+      "received_at": 1789687380
+    },
+    {
+      "name": "VIRUS CORE 1W",
+      "text": "@[Beam] OH Shit!.... Welcome back Hommie!.... I hope you've been keeping well over the last littel bit!... Missed yeah!",
+      "received_at": 1789687320
+    },
+    {
+      "name": "Fuzz Factor",
+      "text": "@[Beam] all good! Ur rptrs have been firing laser BEAMs all over :D",
+      "received_at": 1789687260
+    },
+    {
+      "name": "Beam",
+      "text": "It seems the mesh has been meshing mighty and more",
+      "received_at": 1789687080
+    },
+    {
+      "name": "Beam",
+      "text": "@[FaberVision🐊] thanks fabe.",
+      "received_at": 1789687080
+    },
+    {
+      "name": "icebalm mobile 2",
+      "text": "Good evening mesh",
+      "received_at": 1789687020
+    },
+    {
+      "name": "Beam",
+      "text": "@[Fuzz Factor] @[Bobabate 🅱️] all is well...hope the same for you all.",
+      "received_at": 1789687020
+    },
+    {
+      "name": "FaberVision🐊",
+      "text": "@[Beam] Welcome back! 👋",
+      "received_at": 1789686960
+    },
+    {
+      "name": "Fuzz Factor",
+      "text": "@[Beam] BEAM!! What a pleasant surprise! I Rx you happily my friend! How are you??",
+      "received_at": 1789686900
+    },
+    {
+      "name": "Bobabate 🅱️",
+      "text": "@[Beam] !!! 👋",
+      "received_at": 1789686900
+    },
+    {
+      "name": "Beam",
+      "text": "Hey Virus, do you copy? Fuzz, it's beam. Do you copy?....On your left.",
+      "received_at": 1789686840
+    },
+    {
+      "name": "Fuzz Factor",
+      "text": "@[Kars8086] Hi Kars, how are you? :)",
+      "received_at": 1789686660
+    },
+    {
+      "name": "Fuzz Factor",
+      "text": "@[🥦broccoli] @[🆒️TP-Subcooled] sup stars? :)",
+      "received_at": 1789686660
+    },
+    {
       "name": "Fuzz Factor",
       "text": "@[VIRUS CORE 1W] did you implement ai into the controller? :O",
       "received_at": 1789686600
@@ -2064,11 +2134,6 @@
       "name": "Fuzz Factor GO",
       "text": "@[Bobabate 🅱️] Loon and Third Line adverts came in. :)",
       "received_at": 1789601940
-    },
-    {
-      "name": "VE3VVZ",
-      "text": "Good evening from Toronto to all.   Community will grow no doubt.",
-      "received_at": 1789600680
     }
   ],
   "activity": {
@@ -2313,7 +2378,7 @@
       ],
       [
         1789686000,
-        4
+        18
       ]
     ]
   },
@@ -2369,6 +2434,6 @@
   ],
   "locations": {
     "mapped": 228,
-    "unknown": 51
+    "unknown": 53
   }
 }
