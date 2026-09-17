@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789633524,
+  "published_at": 1789635324,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -252,6 +252,13 @@
       "position": [
         43.49573,
         -79.66663
+      ]
+    },
+    {
+      "name": "County Rd 28",
+      "position": [
+        44.12323,
+        -77.37075
       ]
     },
     {
@@ -1503,6 +1510,11 @@
   ],
   "messages": [
     {
+      "name": "neodriver",
+      "text": "Good morning mesh",
+      "received_at": 1789635060
+    },
+    {
       "name": "Tdot 🤖",
       "text": "📣 Welcome! Try #help #test #jays. Please no bots in public, 3Byte in Canada, Repeaters use regions meshcore.ca/config/ Join discord.gg/wSHbeb86r4",
       "received_at": 1789617600
@@ -2206,10 +2218,22 @@
       [
         1789617600,
         1
+      ],
+      [
+        1789632000,
+        1
       ]
     ]
   },
   "arrivals": [
+    {
+      "name": "County Rd 28",
+      "position": [
+        44.12323,
+        -77.37075
+      ],
+      "first_seen": 1789635060
+    },
     {
       "name": "⚡️ GTN 99",
       "position": [
@@ -2249,18 +2273,10 @@
         -80.45158
       ],
       "first_seen": 1789628160
-    },
-    {
-      "name": "IRQ27-2",
-      "position": [
-        43.21584,
-        -77.6102
-      ],
-      "first_seen": 1789626540
     }
   ],
   "locations": {
-    "mapped": 214,
+    "mapped": 215,
     "unknown": 45
   }
 }
