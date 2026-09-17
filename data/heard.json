@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789607424,
+  "published_at": 1789609224,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -511,6 +511,13 @@
       "position": [
         43.17262,
         -79.03959
+      ]
+    },
+    {
+      "name": "Lions Park Moira river",
+      "position": [
+        44.17155,
+        -77.38302
       ]
     },
     {
@@ -1277,6 +1284,13 @@
       ]
     },
     {
+      "name": "🍉Watermelon",
+      "position": [
+        44.15505,
+        -77.40527
+      ]
+    },
+    {
       "name": "🍓Strawberry",
       "position": [
         44.15517,
@@ -1895,41 +1909,6 @@
       "name": "Fuzz Factor",
       "text": "@[RMS416 🦖] do u mean geographically or at your home? :)",
       "received_at": 1789524060
-    },
-    {
-      "name": "RR_COM_1_37745",
-      "text": "@[Carlson V4 (2)] Tn? Im in greeneville",
-      "received_at": 1789521780
-    },
-    {
-      "name": "AM Mesh 2",
-      "text": "@[MeshNerd🤓] Hello from Getzville NY",
-      "received_at": 1789521720
-    },
-    {
-      "name": "MeshNerd🤓",
-      "text": "Hello from Lisgar",
-      "received_at": 1789521660
-    },
-    {
-      "name": "RMS416 🦖",
-      "text": "What is that a good spot for a repeater?",
-      "received_at": 1789521660
-    },
-    {
-      "name": "Bird",
-      "text": "@[K] I got you in Purcellville, VA",
-      "received_at": 1789521480
-    },
-    {
-      "name": "BUSHOUTDOORS_CANADA",
-      "text": "@dileas48",
-      "received_at": 1789521300
-    },
-    {
-      "name": "🔅Air.In",
-      "text": "@[AM Mesh 2] howdy",
-      "received_at": 1789521120
     }
   ],
   "activity": {
@@ -2116,6 +2095,22 @@
   },
   "arrivals": [
     {
+      "name": "🍉Watermelon",
+      "position": [
+        44.15505,
+        -77.40527
+      ],
+      "first_seen": 1789607940
+    },
+    {
+      "name": "Lions Park Moira river",
+      "position": [
+        44.17155,
+        -77.38302
+      ],
+      "first_seen": 1789607700
+    },
+    {
       "name": "Heltec Repeater MDT",
       "position": [
         43.51199,
@@ -2146,26 +2141,10 @@
         -78.859
       ],
       "first_seen": 1789603560
-    },
-    {
-      "name": "Mr fUggly repeater",
-      "position": [
-        43.02287,
-        -79.24391
-      ],
-      "first_seen": 1789602780
-    },
-    {
-      "name": "BuffaLoRa.org SnyderMes",
-      "position": [
-        42.96522,
-        -78.7782
-      ],
-      "first_seen": 1789601820
     }
   ],
   "locations": {
-    "mapped": 196,
+    "mapped": 198,
     "unknown": 43
   }
 }
