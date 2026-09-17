@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789625424,
+  "published_at": 1789626324,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -427,6 +427,13 @@
       "position": [
         44.19811,
         -77.36947
+      ]
+    },
+    {
+      "name": "iRepeat🤘",
+      "position": [
+        45.5115,
+        -75.45919
       ]
     },
     {
@@ -2162,6 +2169,14 @@
   },
   "arrivals": [
     {
+      "name": "iRepeat🤘",
+      "position": [
+        45.5115,
+        -75.45919
+      ],
+      "first_seen": 1789626240
+    },
+    {
       "name": "IB Repeater",
       "position": [
         43.64108,
@@ -2200,18 +2215,10 @@
         -77.0113
       ],
       "first_seen": 1789618440
-    },
-    {
-      "name": "Tosho Sweep",
-      "position": [
-        43.00834,
-        -76.13716
-      ],
-      "first_seen": 1789614480
     }
   ],
   "locations": {
-    "mapped": 207,
+    "mapped": 208,
     "unknown": 42
   }
 }
