@@ -12,7 +12,7 @@
   function ensureMap() {
     if (map) return;
     if (!window.L) { $('map-status').textContent = 'Map unavailable. Node names are listed below.'; return; }
-    map = L.map('public-map', {minZoom: 2, maxZoom: 18, scrollWheelZoom: false}).setView(gta, 9);
+    map = L.map('public-map', {minZoom: 2, maxZoom: 18, scrollWheelZoom: true}).setView(gta, 9);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).on('tileerror', () => { $('tiles-status').hidden = false; }).addTo(map);
