@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789621824,
+  "published_at": 1789625424,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -413,6 +413,13 @@
       "position": [
         43.63614,
         -79.54007
+      ]
+    },
+    {
+      "name": "IB Repeater",
+      "position": [
+        43.64108,
+        -79.39786
       ]
     },
     {
@@ -1008,6 +1015,13 @@
       "position": [
         43.24316,
         -79.94833
+      ]
+    },
+    {
+      "name": "VA3HUP_DowsLake",
+      "position": [
+        45.3966,
+        -75.7009
       ]
     },
     {
@@ -1962,7 +1976,7 @@
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789621200,
+    "through": 1789624800,
     "hours": [
       [
         1789347600,
@@ -2148,6 +2162,22 @@
   },
   "arrivals": [
     {
+      "name": "IB Repeater",
+      "position": [
+        43.64108,
+        -79.39786
+      ],
+      "first_seen": 1789625400
+    },
+    {
+      "name": "VA3HUP_DowsLake",
+      "position": [
+        45.3966,
+        -75.7009
+      ],
+      "first_seen": 1789624740
+    },
+    {
       "name": "QueenN1WSlkyTech",
       "position": [
         43.45418,
@@ -2178,26 +2208,10 @@
         -76.13716
       ],
       "first_seen": 1789614480
-    },
-    {
-      "name": "sliMesh OHM ULP 1W",
-      "position": [
-        43.64648,
-        -79.32412
-      ],
-      "first_seen": 1789613760
-    },
-    {
-      "name": "🛩️L-1011",
-      "position": [
-        43.60696,
-        -79.68395
-      ],
-      "first_seen": 1789613700
     }
   ],
   "locations": {
-    "mapped": 205,
+    "mapped": 207,
     "unknown": 42
   }
 }
