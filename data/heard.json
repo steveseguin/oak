@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789609224,
+  "published_at": 1789610124,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1036,6 +1036,13 @@
       "position": [
         43.0374,
         -76.19843
+      ]
+    },
+    {
+      "name": "Wilson Repeater",
+      "position": [
+        43.73988,
+        -79.42165
       ]
     },
     {
@@ -2144,7 +2151,7 @@
     }
   ],
   "locations": {
-    "mapped": 198,
-    "unknown": 43
+    "mapped": 199,
+    "unknown": 42
   }
 }
