@@ -1,4 +1,4 @@
-/* Meshcast: white backgrounds, dark readable text, simple layout. */
+/* Meshcast: readable light palette; dark.css provides the optional dark palette. */
 :root {
   color-scheme: light;
   --bg: #ffffff;
@@ -105,9 +105,15 @@ summary { cursor: pointer; font-weight: 650; padding: .5rem 0; }
 .tool-frame { width: 100%; height: 820px; border: 1px solid var(--border); border-radius: 8px; background: #fff; }
 details code { word-break: break-word; }
 .call-launch { margin: 1rem 0; }
+.topbar { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; }
+.topbar nav { justify-content: flex-end; }
+.site-theme { width: auto; min-height: 44px; max-width: 125px; padding: .35rem .5rem; font-size: 16px; }
 @media (max-width: 850px) {
   .tools { grid-template-columns: 1fr; }
   .topbar { align-items: flex-start; flex-direction: column; gap: .7rem; }
+  .topbar { grid-template-columns: 1fr auto; align-items: center; }
+  .topbar nav { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; }
+  .site-theme { grid-column: 2; grid-row: 1; }
 }
 @media (max-width: 620px) {
   main { padding: 0 1rem 2rem; }

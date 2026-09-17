@@ -1,0 +1,42 @@
+/* Loaded for system dark mode or an explicit Dark selection. */
+:root {
+  color-scheme: dark;
+  --bg: #171b21;
+  --surface: #20262e;
+  --border: #59616e;
+  --text: #edf0f5;
+  --muted: #bbc4d1;
+  --accent: #ff9da5;
+}
+a:hover { color: #ffc4c9; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible,
+select:focus-visible, summary:focus-visible { outline-color: #9dc9ff; }
+.secondary, input, textarea, select { background: var(--surface); border-color: #8591a2; }
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
+.secondary:hover, button.secondary:hover:not(:disabled) { background: #303b49; color: var(--text); }
+.notice { background: #38262d; }
+pre, .part, .avatar { background: #272f3a; }
+.badge { border-color: #8591a2; }
+.activity-periods button, .heard-tabs button, .node-link { background: var(--surface); color: var(--text); border-color: var(--border); }
+.activity-periods button[aria-pressed=true], .heard-tabs button[aria-selected=true] { background: var(--text); color: var(--bg); }
+.activity-periods button:hover, .heard-tabs button:hover,
+.arrival-link:hover:not(:disabled), .node-link:hover:not(:disabled) { background: #303b49; color: var(--text); }
+.heard-tabs button[aria-selected=true]:hover { background: #cdd7e5; color: var(--bg); }
+.activity-bar span, .location-ratio span { background: var(--accent); }
+.activity-bar:hover:not(:disabled), .activity-bar:focus-visible { background: #303b49; }
+.activity-bar:hover span, .activity-bar:focus-visible span { background: #ffc4c9; }
+.activity-bar.no-history span { background: repeating-linear-gradient(135deg,#748091 0 2px,transparent 2px 7px); }
+.public-message { background: var(--surface); border-color: var(--border); }
+.message-heading time { color: var(--muted); }
+#public-map { background: #202a33; }
+/* Keep markers and photos unchanged; darken only the map's base tiles. */
+#public-map .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.9) saturate(.7); }
+#public-map .leaflet-popup-content-wrapper, #public-map .leaflet-popup-tip,
+#public-map .leaflet-tooltip, #public-map .leaflet-control-zoom a,
+#public-map .leaflet-control-attribution { background: var(--surface); color: var(--text); }
+#public-map .leaflet-tooltip { border-color: var(--border); }
+#public-map .leaflet-tooltip-right::before { border-right-color: var(--surface); }
+#public-map .leaflet-tooltip-left::before { border-left-color: var(--surface); }
+#public-map .leaflet-popup-close-button, #public-map .leaflet-control-attribution a { color: var(--accent); }
+#public-map .leaflet-control-zoom a:hover { background: #303b49; }
+#public-map .leaflet-control-zoom a.leaflet-disabled { color: #98a4b4; }

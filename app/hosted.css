@@ -9,11 +9,5 @@
 #connection-setup p{margin:10px 0;color:var(--muted)}#connection-setup .device-choices{display:flex;flex-wrap:wrap;gap:12px}
 #setup-status{font-weight:600}#change-connection{margin:8px;min-height:42px;font-size:16px}
 body:has(#connection-setup:not([hidden])){background:var(--white)}
-:root[data-theme="light"]{color-scheme:light}
-:root[data-theme="dark"]{color-scheme:dark}
-.connection-top,.app-tools{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.app-tools{margin-bottom:8px}
-.theme-choice{font:16px var(--font);color:var(--ink);background:var(--white);border:1px solid var(--muted);border-radius:6px;min-height:44px;padding:6px 8px;max-width:120px;cursor:pointer}
-.theme-choice:focus-visible{outline:2px solid var(--green);outline-offset:3px}
-.app-tools #change-connection{margin:0;text-align:left}
+:root{color-scheme:dark}
 @media(max-width:600px){#connection-setup{padding:16px}#connection-setup .connection-card{padding:16px}}
