@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789687524,
+  "published_at": 1789688424,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1602,6 +1602,31 @@
   "messages": [
     {
       "name": "Beam",
+      "text": "@[VIRUS CORE 1W] how far is the reach?",
+      "received_at": 1789688280
+    },
+    {
+      "name": "Beam",
+      "text": "@[Bobabate 🅱️]mesh is looking very good...you did well Mando.",
+      "received_at": 1789688220
+    },
+    {
+      "name": "🛩️Q400 T-Deck",
+      "text": "Good copy here!",
+      "received_at": 1789687980
+    },
+    {
+      "name": "Beam",
+      "text": "@[🛩️Q400 T-Deck] Rx from sq1...good copy and how copy?",
+      "received_at": 1789687680
+    },
+    {
+      "name": "VIRUS CORE 1W",
+      "text": "@[Beam] CORE has made some great strides...... MESH kind of feels like it's spinning it's wheels.... No matter more spread more bette!",
+      "received_at": 1789687560
+    },
+    {
+      "name": "Beam",
       "text": "@[VIRUS CORE 1W] as well as can be...good to be back ...and see the mesh has been meshing along.",
       "received_at": 1789687440
     },
@@ -2129,11 +2154,6 @@
       "name": "🆒️TP-Subcooled",
       "text": "Evening !",
       "received_at": 1789602480
-    },
-    {
-      "name": "Fuzz Factor GO",
-      "text": "@[Bobabate 🅱️] Loon and Third Line adverts came in. :)",
-      "received_at": 1789601940
     }
   ],
   "activity": {
@@ -2378,7 +2398,7 @@
       ],
       [
         1789686000,
-        18
+        23
       ]
     ]
   },
