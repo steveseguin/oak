@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789678524,
+  "published_at": 1789679424,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -551,8 +551,8 @@
     {
       "name": "Kraken 2",
       "position": [
-        43.65298,
-        -79.3623
+        43.65315,
+        -79.36256
       ]
     },
     {
@@ -1587,6 +1587,16 @@
   ],
   "messages": [
     {
+      "name": "Krycek",
+      "text": "@[scoates] Copied south of Picton.",
+      "received_at": 1789678740
+    },
+    {
+      "name": "scoates",
+      "text": "Hello from VIA Rail 67",
+      "received_at": 1789678620
+    },
+    {
       "name": "Kars8086",
       "text": "Good afternoon mesh ppls!",
       "received_at": 1789677960
@@ -2135,21 +2145,11 @@
       "name": "VE3RTU",
       "text": "@[VE3VVZ] good afternoon",
       "received_at": 1789593060
-    },
-    {
-      "name": "Samsquantch",
-      "text": "Afternoon all",
-      "received_at": 1789592580
-    },
-    {
-      "name": "🆒️TP-Subcooled",
-      "text": "@[MP Card]  hello",
-      "received_at": 1789592460
     }
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789675200,
+    "through": 1789678800,
     "hours": [
       [
         1789347600,
@@ -2377,7 +2377,7 @@
       ],
       [
         1789675200,
-        2
+        4
       ]
     ]
   },
@@ -2433,6 +2433,6 @@
   ],
   "locations": {
     "mapped": 226,
-    "unknown": 49
+    "unknown": 50
   }
 }
