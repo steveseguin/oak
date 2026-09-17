@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789635324,
+  "published_at": 1789636225,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -493,6 +493,13 @@
       ]
     },
     {
+      "name": "Kinze_Solar",
+      "position": [
+        43.43183,
+        -80.43858
+      ]
+    },
+    {
       "name": "Kitchen Sink REP 🌊",
       "position": [
         43.72967,
@@ -516,8 +523,8 @@
     {
       "name": "Kraken 2",
       "position": [
-        43.65316,
-        -79.36273
+        43.65317,
+        -79.36275
       ]
     },
     {
@@ -2037,7 +2044,7 @@
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789632000,
+    "through": 1789635600,
     "hours": [
       [
         1789347600,
@@ -2227,6 +2234,14 @@
   },
   "arrivals": [
     {
+      "name": "Kinze_Solar",
+      "position": [
+        43.43183,
+        -80.43858
+      ],
+      "first_seen": 1789636080
+    },
+    {
       "name": "County Rd 28",
       "position": [
         44.12323,
@@ -2265,18 +2280,10 @@
         -75.59392
       ],
       "first_seen": 1789628160
-    },
-    {
-      "name": "YKF - 1W Kitchener",
-      "position": [
-        43.44222,
-        -80.45158
-      ],
-      "first_seen": 1789628160
     }
   ],
   "locations": {
-    "mapped": 215,
+    "mapped": 216,
     "unknown": 45
   }
 }
