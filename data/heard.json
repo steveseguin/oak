@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789602923,
+  "published_at": 1789603824,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -469,6 +469,13 @@
       "position": [
         43.09337,
         -76.23958
+      ]
+    },
+    {
+      "name": "Lakeview Repeater",
+      "position": [
+        43.86175,
+        -78.859
       ]
     },
     {
@@ -1281,6 +1288,13 @@
       "position": [
         42.93872,
         -78.67727
+      ]
+    },
+    {
+      "name": "🚭Asbestos Observer",
+      "position": [
+        44.10228,
+        -77.58416
       ]
     },
     {
