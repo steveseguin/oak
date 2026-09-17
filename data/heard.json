@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789656025,
+  "published_at": 1789657824,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -544,8 +544,8 @@
     {
       "name": "Kraken 2",
       "position": [
-        43.65317,
-        -79.36275
+        43.65298,
+        -79.3623
       ]
     },
     {
@@ -1305,6 +1305,13 @@
       ]
     },
     {
+      "name": "Wright's Corners 1W Rep",
+      "position": [
+        43.21963,
+        -78.67769
+      ]
+    },
+    {
       "name": "xBlazerJROGx 🐲",
       "position": [
         43.74288,
@@ -1565,6 +1572,11 @@
     }
   ],
   "messages": [
+    {
+      "name": "Dimebag",
+      "text": "Lmao",
+      "received_at": 1789657740
+    },
     {
       "name": "🛩️Q400",
       "text": "@[Fuzz Factor GO] Nice to see you, my brotha",
@@ -2158,7 +2170,7 @@
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789653600,
+    "through": 1789657200,
     "hours": [
       [
         1789347600,
@@ -2367,10 +2379,22 @@
       [
         1789653600,
         3
+      ],
+      [
+        1789657200,
+        1
       ]
     ]
   },
   "arrivals": [
+    {
+      "name": "Wright's Corners 1W Rep",
+      "position": [
+        43.21963,
+        -78.67769
+      ],
+      "first_seen": 1789657140
+    },
     {
       "name": "café/university ☕",
       "position": [
@@ -2410,18 +2434,10 @@
         -80.30849
       ],
       "first_seen": 1789637160
-    },
-    {
-      "name": "YKF2jig2REP",
-      "position": [
-        43.42879,
-        -80.30947
-      ],
-      "first_seen": 1789637160
     }
   ],
   "locations": {
-    "mapped": 223,
+    "mapped": 224,
     "unknown": 47
   }
 }
