@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789663224,
+  "published_at": 1789664124,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -497,6 +497,13 @@
       "position": [
         43.42951,
         -80.30849
+      ]
+    },
+    {
+      "name": "JZroomserver",
+      "position": [
+        42.88436,
+        -78.7846
       ]
     },
     {
@@ -2201,11 +2208,6 @@
       "name": "Echo-MRN-P1",
       "text": "Good afternoon everybody, I hope the day is going well for you all",
       "received_at": 1789582200
-    },
-    {
-      "name": "BullOnParade",
-      "text": "@[👽DEFKON2] 🤤",
-      "received_at": 1789577160
     }
   ],
   "activity": {
@@ -2432,6 +2434,14 @@
   },
   "arrivals": [
     {
+      "name": "JZroomserver",
+      "position": [
+        42.88436,
+        -78.7846
+      ],
+      "first_seen": 1789663500
+    },
+    {
       "name": "Wright's Corners 1W Rep",
       "position": [
         43.21963,
@@ -2470,18 +2480,10 @@
         -77.36478
       ],
       "first_seen": 1789638720
-    },
-    {
-      "name": "JiggaRoom",
-      "position": [
-        43.42951,
-        -80.30849
-      ],
-      "first_seen": 1789637160
     }
   ],
   "locations": {
-    "mapped": 224,
+    "mapped": 225,
     "unknown": 48
   }
 }
