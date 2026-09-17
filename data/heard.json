@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789685724,
+  "published_at": 1789686624,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1319,6 +1319,13 @@
       ]
     },
     {
+      "name": "WNYMeshcore Warsaw/Perr",
+      "position": [
+        42.74608,
+        -78.07622
+      ]
+    },
+    {
       "name": "WNYMeshCore West Falls",
       "position": [
         42.70535,
@@ -1593,6 +1600,26 @@
     }
   ],
   "messages": [
+    {
+      "name": "Fuzz Factor",
+      "text": "@[VIRUS CORE 1W] did you implement ai into the controller? :O",
+      "received_at": 1789686600
+    },
+    {
+      "name": "🆒️TP-Subcooled",
+      "text": "Evening",
+      "received_at": 1789686540
+    },
+    {
+      "name": "FaberVision🐊",
+      "text": "@[🥦broccoli] good evening!",
+      "received_at": 1789686540
+    },
+    {
+      "name": "🥦broccoli",
+      "text": "Evening mesh",
+      "received_at": 1789686480
+    },
     {
       "name": "VIRUS CORE 1W",
       "text": "@[FLAN] Thanks FLAN!",
@@ -2042,26 +2069,11 @@
       "name": "VE3VVZ",
       "text": "Good evening from Toronto to all.   Community will grow no doubt.",
       "received_at": 1789600680
-    },
-    {
-      "name": "N0LSD",
-      "text": "@[MeshNerd🤓] not familiar.",
-      "received_at": 1789600080
-    },
-    {
-      "name": "VE3EJP",
-      "text": "Evening from Belleville 👋",
-      "received_at": 1789599360
-    },
-    {
-      "name": "MeshNerd🤓",
-      "text": "Anyone try meshpoint?",
-      "received_at": 1789599300
     }
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789682400,
+    "through": 1789686000,
     "hours": [
       [
         1789347600,
@@ -2298,10 +2310,22 @@
       [
         1789682400,
         6
+      ],
+      [
+        1789686000,
+        4
       ]
     ]
   },
   "arrivals": [
+    {
+      "name": "WNYMeshcore Warsaw/Perr",
+      "position": [
+        42.74608,
+        -78.07622
+      ],
+      "first_seen": 1789685760
+    },
     {
       "name": "Pfarner Hill",
       "position": [
@@ -2341,18 +2365,10 @@
         -79.39414
       ],
       "first_seen": 1789644900
-    },
-    {
-      "name": "☀️Boston Valley 1W",
-      "position": [
-        42.64453,
-        -78.73897
-      ],
-      "first_seen": 1789643040
     }
   ],
   "locations": {
-    "mapped": 227,
-    "unknown": 50
+    "mapped": 228,
+    "unknown": 51
   }
 }
