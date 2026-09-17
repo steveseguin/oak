@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789603824,
+  "published_at": 1789604724,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1844,16 +1844,6 @@
       "name": "Krycek",
       "text": "@[va3rjs-1 🇨🇦] Near Sandbanks, PEC.",
       "received_at": 1789519260
-    },
-    {
-      "name": "va3rjs-1 🇨🇦",
-      "text": "@[Krycek]    You over Brighton wayor near Sandbanks",
-      "received_at": 1789518240
-    },
-    {
-      "name": "Krycek",
-      "text": "@[KH79S] Copied on the NNE shore of Lake Ontario.",
-      "received_at": 1789517520
     }
   ]
 }
