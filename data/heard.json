@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789647024,
+  "published_at": 1789648824,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1560,6 +1560,36 @@
   "messages": [
     {
       "name": "va3rjs-1 🇨🇦",
+      "text": "@[parket] yup, mayhave to go for a drive and see if i can see an outdoor node",
+      "received_at": 1789648500
+    },
+    {
+      "name": "parket",
+      "text": "@[va3rjs-1 🇨🇦] was worth trying anyway.",
+      "received_at": 1789648440
+    },
+    {
+      "name": "BUSHOUTDOORS_CANADA",
+      "text": "I’m on IG. @bushoutdoors_canada",
+      "received_at": 1789648200
+    },
+    {
+      "name": "va3rjs-1 🇨🇦",
+      "text": "@[parket] be nice if there was at least an email address for node owners in the node info……",
+      "received_at": 1789648140
+    },
+    {
+      "name": "va3rjs-1 🇨🇦",
+      "text": "@[parket] yes but no owner info….",
+      "received_at": 1789648080
+    },
+    {
+      "name": "parket",
+      "text": "@[va3rjs-1 🇨🇦] can you log into it without credentials?",
+      "received_at": 1789647960
+    },
+    {
+      "name": "va3rjs-1 🇨🇦",
       "text": "Anyone know who owns the Swackhammer Hilltop repeater?",
       "received_at": 1789647000
     },
@@ -2316,7 +2346,7 @@
       ],
       [
         1789646400,
-        2
+        8
       ]
     ]
   },
