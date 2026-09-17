@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789638024,
+  "published_at": 1789638924,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -791,6 +791,13 @@
       "position": [
         43.60415,
         -79.67446
+      ]
+    },
+    {
+      "name": "Plainfield",
+      "position": [
+        44.27367,
+        -77.36478
       ]
     },
     {
@@ -2277,6 +2284,14 @@
   },
   "arrivals": [
     {
+      "name": "Plainfield",
+      "position": [
+        44.27367,
+        -77.36478
+      ],
+      "first_seen": 1789638720
+    },
+    {
       "name": "JiggaRoom",
       "position": [
         43.42951,
@@ -2315,18 +2330,10 @@
         -76.95469
       ],
       "first_seen": 1789633140
-    },
-    {
-      "name": "Mesh Pickering 1",
-      "position": [
-        43.82893,
-        -79.0999
-      ],
-      "first_seen": 1789630080
     }
   ],
   "locations": {
-    "mapped": 218,
+    "mapped": 219,
     "unknown": 45
   }
 }
