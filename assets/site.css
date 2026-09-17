@@ -50,6 +50,8 @@ p:last-child { margin-bottom: 0; }
 .section-heading > p:last-child { color: var(--muted); }
 .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
 .tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tools h3 { display: flex; align-items: center; gap: .65rem; }
+.tool-icon { width: 32px; height: 32px; flex-shrink: 0; color: var(--accent); fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .card { min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
 .card p { color: var(--muted); }
 .card .button { margin-top: .5rem; }
