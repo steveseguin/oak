@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789676724,
+  "published_at": 1789678524,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -990,6 +990,13 @@
       ]
     },
     {
+      "name": "St Mikes 🅱️",
+      "position": [
+        43.68519,
+        -79.4157
+      ]
+    },
+    {
       "name": "STC Link",
       "position": [
         43.15832,
@@ -1580,6 +1587,11 @@
   ],
   "messages": [
     {
+      "name": "Kars8086",
+      "text": "Good afternoon mesh ppls!",
+      "received_at": 1789677960
+    },
+    {
       "name": "EAO",
       "text": "@[Roger Va3hpr] rx from Dundas Station",
       "received_at": 1789676400
@@ -2133,26 +2145,6 @@
       "name": "🆒️TP-Subcooled",
       "text": "@[MP Card]  hello",
       "received_at": 1789592460
-    },
-    {
-      "name": "MP Card",
-      "text": "hi",
-      "received_at": 1789592040
-    },
-    {
-      "name": "DED00C69 T-Echo",
-      "text": "Here too",
-      "received_at": 1789591800
-    },
-    {
-      "name": "FOX-M1",
-      "text": "@[Kerchunk] Out where?",
-      "received_at": 1789591680
-    },
-    {
-      "name": "Kerchunk",
-      "text": "Anybody out there?",
-      "received_at": 1789591620
     }
   ],
   "activity": {
@@ -2385,11 +2377,19 @@
       ],
       [
         1789675200,
-        1
+        2
       ]
     ]
   },
   "arrivals": [
+    {
+      "name": "St Mikes 🅱️",
+      "position": [
+        43.68519,
+        -79.4157
+      ],
+      "first_seen": 1789678440
+    },
     {
       "name": "JZroomserver",
       "position": [
@@ -2429,18 +2429,10 @@
         -79.2976
       ],
       "first_seen": 1789640700
-    },
-    {
-      "name": "Plainfield",
-      "position": [
-        44.27367,
-        -77.36478
-      ],
-      "first_seen": 1789638720
     }
   ],
   "locations": {
-    "mapped": 225,
+    "mapped": 226,
     "unknown": 49
   }
 }
