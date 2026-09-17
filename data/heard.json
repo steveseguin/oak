@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789688424,
+  "published_at": 1789689324,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1601,6 +1601,21 @@
   ],
   "messages": [
     {
+      "name": "VIRUS CORE 1W",
+      "text": "Less node conflict.",
+      "received_at": 1789688820
+    },
+    {
+      "name": "VIRUS CORE 1W",
+      "text": "Settings-> Network  Settings-> change you hash from 1 to 3 bytes.... GTA made the switch several months ago.",
+      "received_at": 1789688760
+    },
+    {
+      "name": "VIRUS CORE 1W",
+      "text": "On CORE from WNY, Bellville, Ottawa and Montreal sometimes if the bridge is good..... Get on 3 bytes if you haven't done so yet.",
+      "received_at": 1789688520
+    },
+    {
       "name": "Beam",
       "text": "@[VIRUS CORE 1W] how far is the reach?",
       "received_at": 1789688280
@@ -2149,11 +2164,6 @@
       "name": "🔅Air.In",
       "text": "Evening",
       "received_at": 1789605180
-    },
-    {
-      "name": "🆒️TP-Subcooled",
-      "text": "Evening !",
-      "received_at": 1789602480
     }
   ],
   "activity": {
@@ -2398,7 +2408,7 @@
       ],
       [
         1789686000,
-        23
+        26
       ]
     ]
   },
