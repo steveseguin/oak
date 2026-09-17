@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789611024,
+  "published_at": 1789614624,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -481,8 +481,8 @@
     {
       "name": "Kraken 2",
       "position": [
-        43.65326,
-        -79.36269
+        43.65316,
+        -79.36273
       ]
     },
     {
@@ -864,6 +864,13 @@
       ]
     },
     {
+      "name": "sliMesh OHM ULP 1W",
+      "position": [
+        43.64648,
+        -79.32412
+      ]
+    },
+    {
       "name": "Solvay Repeater",
       "position": [
         43.05324,
@@ -959,6 +966,13 @@
       "position": [
         43.24883,
         -79.8975
+      ]
+    },
+    {
+      "name": "Tosho Sweep",
+      "position": [
+        43.00834,
+        -76.13716
       ]
     },
     {
@@ -1344,6 +1358,13 @@
       "position": [
         43.60788,
         -79.67723
+      ]
+    },
+    {
+      "name": "🛩️L-1011",
+      "position": [
+        43.60696,
+        -79.68395
       ]
     },
     {
@@ -1915,7 +1936,7 @@
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789610400,
+    "through": 1789614000,
     "hours": [
       [
         1789347600,
@@ -2097,6 +2118,30 @@
   },
   "arrivals": [
     {
+      "name": "Tosho Sweep",
+      "position": [
+        43.00834,
+        -76.13716
+      ],
+      "first_seen": 1789614480
+    },
+    {
+      "name": "sliMesh OHM ULP 1W",
+      "position": [
+        43.64648,
+        -79.32412
+      ],
+      "first_seen": 1789613760
+    },
+    {
+      "name": "🛩️L-1011",
+      "position": [
+        43.60696,
+        -79.68395
+      ],
+      "first_seen": 1789613700
+    },
+    {
       "name": "🍉Watermelon",
       "position": [
         44.15505,
@@ -2119,34 +2164,10 @@
         -79.88436
       ],
       "first_seen": 1789606800
-    },
-    {
-      "name": "Clay | CNYMeshcore",
-      "position": [
-        43.16127,
-        -76.13937
-      ],
-      "first_seen": 1789605000
-    },
-    {
-      "name": "Hilton - Repeater",
-      "position": [
-        43.27764,
-        -77.89229
-      ],
-      "first_seen": 1789604700
-    },
-    {
-      "name": "Lakeview Repeater",
-      "position": [
-        43.86175,
-        -78.859
-      ],
-      "first_seen": 1789603560
     }
   ],
   "locations": {
-    "mapped": 199,
+    "mapped": 202,
     "unknown": 42
   }
 }
