@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789641624,
+  "published_at": 1789642524,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -2098,11 +2098,6 @@
       "name": "va3rjs-1 🇨🇦",
       "text": "Good morning people of the Mesh😀",
       "received_at": 1789556280
-    },
-    {
-      "name": "AM Mesh 2",
-      "text": "Good morning",
-      "received_at": 1789555680
     }
   ],
   "activity": {
