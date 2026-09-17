@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789644324,
+  "published_at": 1789645224,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -224,6 +224,13 @@
       "position": [
         43.65327,
         -79.42038
+      ]
+    },
+    {
+      "name": "café/university ☕",
+      "position": [
+        43.66872,
+        -79.39414
       ]
     },
     {
@@ -2095,11 +2102,6 @@
       "name": "Echo-MRN-P1",
       "text": "Good morning everyone",
       "received_at": 1789559160
-    },
-    {
-      "name": "FOX-TBS",
-      "text": "Good morning @[lightxblazer 🐲]",
-      "received_at": 1789558020
     }
   ],
   "activity": {
@@ -2306,6 +2308,14 @@
   },
   "arrivals": [
     {
+      "name": "café/university ☕",
+      "position": [
+        43.66872,
+        -79.39414
+      ],
+      "first_seen": 1789644900
+    },
+    {
       "name": "☀️Boston Valley 1W",
       "position": [
         42.64453,
@@ -2344,18 +2354,10 @@
         -80.30947
       ],
       "first_seen": 1789637160
-    },
-    {
-      "name": "Kinze_Solar",
-      "position": [
-        43.43183,
-        -80.43858
-      ],
-      "first_seen": 1789636080
     }
   ],
   "locations": {
-    "mapped": 221,
+    "mapped": 222,
     "unknown": 46
   }
 }
