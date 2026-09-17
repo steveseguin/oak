@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789671324,
+  "published_at": 1789672224,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1580,6 +1580,16 @@
   ],
   "messages": [
     {
+      "name": "🍀LKY.trk",
+      "text": "@[Roger Va3hpr] advert your node. For a direct comms",
+      "received_at": 1789671660
+    },
+    {
+      "name": "🍀LKY.trk",
+      "text": "@[Roger Va3hpr] rx from islington station",
+      "received_at": 1789671600
+    },
+    {
       "name": "Roger Va3hpr",
       "text": "@[MeshBOB] thx",
       "received_at": 1789669140
@@ -2198,26 +2208,11 @@
       "name": "👽DEFKON2",
       "text": "Noice",
       "received_at": 1789585860
-    },
-    {
-      "name": "Fuzz Factor",
-      "text": "A Bayview/Steeles repeater just popped up. Nice. Reinforcing the north!",
-      "received_at": 1789585740
-    },
-    {
-      "name": "Fuzz Factor",
-      "text": "@[Echo-MRN-P1] 👋",
-      "received_at": 1789585680
-    },
-    {
-      "name": "👽DEFKON2",
-      "text": "Hot and sweaty lol but not terrible",
-      "received_at": 1789585620
     }
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789668000,
+    "through": 1789671600,
     "hours": [
       [
         1789347600,
@@ -2438,6 +2433,10 @@
       [
         1789668000,
         3
+      ],
+      [
+        1789671600,
+        2
       ]
     ]
   },
