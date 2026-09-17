@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789628125,
+  "published_at": 1789629024,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -283,6 +283,13 @@
       ]
     },
     {
+      "name": "Furthur",
+      "position": [
+        45.53421,
+        -73.60068
+      ]
+    },
+    {
       "name": "Fuzz Factor BEE",
       "position": [
         43.72887,
@@ -518,6 +525,13 @@
       "position": [
         43.86175,
         -78.859
+      ]
+    },
+    {
+      "name": "Leitrim_Repeater2",
+      "position": [
+        45.32582,
+        -75.59392
       ]
     },
     {
@@ -1239,6 +1253,13 @@
       "position": [
         43.74288,
         -79.4822
+      ]
+    },
+    {
+      "name": "YKF - 1W Kitchener",
+      "position": [
+        43.44222,
+        -80.45158
       ]
     },
     {
@@ -1990,7 +2011,7 @@
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789624800,
+    "through": 1789628400,
     "hours": [
       [
         1789347600,
@@ -2176,6 +2197,30 @@
   },
   "arrivals": [
     {
+      "name": "Furthur",
+      "position": [
+        45.53421,
+        -73.60068
+      ],
+      "first_seen": 1789628520
+    },
+    {
+      "name": "Leitrim_Repeater2",
+      "position": [
+        45.32582,
+        -75.59392
+      ],
+      "first_seen": 1789628160
+    },
+    {
+      "name": "YKF - 1W Kitchener",
+      "position": [
+        43.44222,
+        -80.45158
+      ],
+      "first_seen": 1789628160
+    },
+    {
       "name": "IRQ27-2",
       "position": [
         43.21584,
@@ -2198,34 +2243,10 @@
         -79.39786
       ],
       "first_seen": 1789625400
-    },
-    {
-      "name": "VA3HUP_DowsLake",
-      "position": [
-        45.3966,
-        -75.7009
-      ],
-      "first_seen": 1789624740
-    },
-    {
-      "name": "QueenN1WSlkyTech",
-      "position": [
-        43.45418,
-        -80.48649
-      ],
-      "first_seen": 1789621440
-    },
-    {
-      "name": "YKF_Moe",
-      "position": [
-        43.52488,
-        -80.2494
-      ],
-      "first_seen": 1789620840
     }
   ],
   "locations": {
-    "mapped": 209,
-    "unknown": 44
+    "mapped": 212,
+    "unknown": 45
   }
 }
