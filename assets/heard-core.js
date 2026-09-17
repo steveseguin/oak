@@ -77,11 +77,12 @@
     }
     return bins;
   }
-  function color(name) {
+  function color(name, dark = false) {
     let hash = 2166136261;
     for (const c of name.normalize('NFKC').toLowerCase()) hash = Math.imul(hash ^ c.codePointAt(0), 16777619);
     hash >>>= 0;
-    // Dark text on a pale background; many tones without low-contrast labels.
+    // Keep each sender's hue, using a background suited to the theme's text.
+    if (dark) return 'hsl(' + hash % 360 + ' ' + (22 + (hash >>> 9) % 17) + '% ' + (16 + (hash >>> 17) % 7) + '%)';
     return 'hsl(' + hash % 360 + ' ' + (35 + (hash >>> 9) % 31) + '% ' + (91 + (hash >>> 17) % 5) + '%)';
   }
   // Find the most points inside a fixed-size viewport, without changing scale.

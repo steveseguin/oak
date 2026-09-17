@@ -26,7 +26,7 @@ pre, .part, .avatar { background: #272f3a; }
 .activity-bar:hover:not(:disabled), .activity-bar:focus-visible { background: #303b49; }
 .activity-bar:hover span, .activity-bar:focus-visible span { background: #ffc4c9; }
 .activity-bar.no-history span { background: repeating-linear-gradient(135deg,#748091 0 2px,transparent 2px 7px); }
-.public-message { background: var(--surface); border-color: var(--border); }
+.public-message { background: var(--message-dark, var(--surface)); border-color: var(--border); }
 .message-heading time { color: var(--muted); }
 #public-map { background: #202a33; }
 /* Keep markers and photos unchanged; darken only the map's base tiles. */

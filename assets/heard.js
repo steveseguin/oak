@@ -72,7 +72,8 @@
     if (!data) return;
     $('messages').replaceChildren(...data.messages.map(message => {
       const card = element('article', undefined, 'public-message');
-      card.style.backgroundColor = core.color(message.name);
+      card.style.setProperty('--message-light', core.color(message.name));
+      card.style.setProperty('--message-dark', core.color(message.name, true));
       const header = element('div', undefined, 'message-heading');
       const time = element('time', core.age(message.received_at));
       time.dateTime = new Date(message.received_at * 1000).toISOString();

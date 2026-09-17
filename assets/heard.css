@@ -59,7 +59,7 @@
 .node-link:hover:not(:disabled) { color: var(--text); background: #f1f2f4; }
 .chat-note { margin-top: 1rem; }
 #messages { max-width: 820px; display: grid; gap: .65rem; }
-.public-message { border: 1px solid #c4cbd1; border-radius: 8px; padding: .7rem .9rem; min-width: 0; }
+.public-message { color: var(--text); background: var(--message-light, var(--surface)); border: 1px solid #c4cbd1; border-radius: 8px; padding: .7rem .9rem; min-width: 0; }
 .message-heading { display: flex; justify-content: space-between; gap: .75rem; align-items: baseline; }
 .message-heading strong { font-size: 16px; overflow-wrap: anywhere; }
 .message-heading time { font-size: 16px; color: #4b5563; white-space: nowrap; }
