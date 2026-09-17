@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789636225,
+  "published_at": 1789638024,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -476,6 +476,13 @@
       "position": [
         43.67025,
         -79.43637
+      ]
+    },
+    {
+      "name": "JiggaRoom",
+      "position": [
+        43.42951,
+        -80.30849
       ]
     },
     {
@@ -1284,6 +1291,13 @@
       ]
     },
     {
+      "name": "YKF2jig2REP",
+      "position": [
+        43.42879,
+        -80.30947
+      ]
+    },
+    {
       "name": "YKF_Moe",
       "position": [
         43.52488,
@@ -1516,6 +1530,31 @@
     }
   ],
   "messages": [
+    {
+      "name": "RoyalToast🌶️",
+      "text": "👀👀rip",
+      "received_at": 1789637700
+    },
+    {
+      "name": "neodriver",
+      "text": "Krab is dead until Saturday",
+      "received_at": 1789637700
+    },
+    {
+      "name": "RoyalToast🌶️",
+      "text": "Morning mesh",
+      "received_at": 1789637700
+    },
+    {
+      "name": "RoyalToast🌶️",
+      "text": "Morning krabs",
+      "received_at": 1789637640
+    },
+    {
+      "name": "🆒️TP-Subcooled",
+      "text": "@[neodriver] Good morning",
+      "received_at": 1789637400
+    },
     {
       "name": "neodriver",
       "text": "Good morning mesh",
@@ -2229,10 +2268,30 @@
       [
         1789632000,
         1
+      ],
+      [
+        1789635600,
+        5
       ]
     ]
   },
   "arrivals": [
+    {
+      "name": "JiggaRoom",
+      "position": [
+        43.42951,
+        -80.30849
+      ],
+      "first_seen": 1789637160
+    },
+    {
+      "name": "YKF2jig2REP",
+      "position": [
+        43.42879,
+        -80.30947
+      ],
+      "first_seen": 1789637160
+    },
     {
       "name": "Kinze_Solar",
       "position": [
@@ -2264,26 +2323,10 @@
         -79.0999
       ],
       "first_seen": 1789630080
-    },
-    {
-      "name": "Furthur",
-      "position": [
-        45.53421,
-        -73.60068
-      ],
-      "first_seen": 1789628520
-    },
-    {
-      "name": "Leitrim_Repeater2",
-      "position": [
-        45.32582,
-        -75.59392
-      ],
-      "first_seen": 1789628160
     }
   ],
   "locations": {
-    "mapped": 216,
+    "mapped": 218,
     "unknown": 45
   }
 }
