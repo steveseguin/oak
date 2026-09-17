@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789626324,
+  "published_at": 1789627224,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -434,6 +434,13 @@
       "position": [
         45.5115,
         -75.45919
+      ]
+    },
+    {
+      "name": "IRQ27-2",
+      "position": [
+        43.21584,
+        -77.6102
       ]
     },
     {
@@ -2169,6 +2176,14 @@
   },
   "arrivals": [
     {
+      "name": "IRQ27-2",
+      "position": [
+        43.21584,
+        -77.6102
+      ],
+      "first_seen": 1789626540
+    },
+    {
       "name": "iRepeat🤘",
       "position": [
         45.5115,
@@ -2207,18 +2222,10 @@
         -80.2494
       ],
       "first_seen": 1789620840
-    },
-    {
-      "name": "⚡️ GTN South Shore",
-      "position": [
-        44.08088,
-        -77.0113
-      ],
-      "first_seen": 1789618440
     }
   ],
   "locations": {
-    "mapped": 208,
-    "unknown": 42
+    "mapped": 209,
+    "unknown": 43
   }
 }
