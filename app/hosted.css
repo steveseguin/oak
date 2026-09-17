@@ -1,0 +1,12 @@
+[hidden]{display:none!important}
+#connection-setup{max-width:860px;margin:0 auto;padding:24px;color:#182330;background:#fff;overflow:auto;height:100dvh;font-size:18px;line-height:1.5}
+#connection-setup h1{font-size:26px;margin:8px 0}#connection-setup h2{font-size:21px;margin:0 0 12px}
+#connection-setup a{color:#155285}#connection-setup .connection-card{border:1px solid #a4adb8;border-radius:10px;padding:20px;margin:18px 0}
+#connection-setup label{display:block;font-weight:600;margin:12px 0 4px}
+#connection-setup input{display:block;width:100%;font:inherit;padding:10px;border:1px solid #788492;border-radius:6px;background:white;color:#182330}
+#connection-setup button{font:inherit;min-height:46px;padding:10px 18px;border:1px solid #182330;border-radius:7px;background:#182330;color:#fff;margin-top:14px}
+#connection-setup button:disabled{background:#dce1e6;color:#475363;border-color:#a4adb8}
+#connection-setup p{margin:10px 0;color:#465462}#connection-setup .device-choices{display:flex;flex-wrap:wrap;gap:12px}
+#setup-status{font-weight:600}#change-connection{margin:8px;min-height:42px;font-size:16px}
+body:has(#connection-setup:not([hidden])){background:#fff}
+@media(max-width:600px){#connection-setup{padding:16px}#connection-setup .connection-card{padding:16px}}

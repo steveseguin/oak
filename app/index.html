@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="MeshCore messages and maps through your server, Bluetooth or USB.">
+  <meta name="referrer" content="no-referrer">
+  <meta name="oak-session" content="">
+  <title>Oak Mesh</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sidebar.css"><link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="map.css">
+  <script src="vendor/leaflet.js" defer></script><script src="map.js" defer></script>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src https: http://127.0.0.1:* http://localhost:* http://[::1]:*; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"><link rel="stylesheet" href="hosted.css"><script type="module" src="connect-launch.mjs"></script></head>
+<body>
+<section id="connection-setup" aria-label="Choose a connection">
+<a href="../">meshcast.ca</a><h1>Oak Mesh</h1><p>Choose how to connect.</p>
+<div class="connection-card"><h2>Portable radio</h2><div class="device-choices"><button id="choose-bluetooth" type="button" disabled>Bluetooth</button><button id="choose-usb" type="button" disabled>USB Serial</button></div>
+<p id="bluetooth-note">Choose a companion radio nearby. Disconnect other apps from it first.</p><p id="usb-note">USB needs companion USB firmware and a supported browser.</p><p>History stays in this browser, separately for each radio. Keep the page open to receive messages.</p></div>
+<div class="connection-card"><h2>Server</h2><form id="server-form"><label for="server-url">Server address</label><input id="server-url" type="url" value="http://127.0.0.1:8765" required autocomplete="off" spellcheck="false"><label for="server-key">Website access key</label><input id="server-key" type="password" required autocomplete="off"><button id="server-connect" type="submit" disabled>Connect to server</button></form>
+<p>In your local Oak Mesh app, open Details → Use from meshcast.ca → Create access key.</p><p>127.0.0.1 means this device. A server on another device needs a reachable HTTPS address. Your key is kept for this browser tab; Change connection clears it.</p></div>
+<p id="setup-status" role="status">Loading connection options…</p><p>Messages, block lists and radio locations are not uploaded to Meshcast. Connecting does not advertise your location or change radio settings.</p>
+</section>
+<div class="workspace" hidden>
+<aside class="sidebar" aria-label="Conversations">
+  <h1 class="sr-only">Oak Mesh messages</h1>
+  <button id="change-connection" type="button" class="quiet">Change connection</button><nav class="view-switch" aria-label="Workspace view"><button id="view-messages" type="button" aria-pressed="true">Messages</button><button id="view-map" type="button" aria-pressed="false">Map</button><button id="details-toggle" type="button" class="quiet mobile-details" aria-controls="radio-panel" aria-expanded="false">Details</button></nav>
+  <button id="directory-toggle" type="button" aria-controls="conversation-directory" aria-expanded="false"><span id="directory-name">Channel</span><span aria-hidden="true">⌄</span></button>
+  <div id="conversation-directory">
+  <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search messages" aria-label="Search saved messages"></label>
+  <details class="block-settings"><summary>Block list <span id="block-count">0</span></summary>
+    <p>Channel messages · this browser</p>
+    <div id="block-list"></div>
+    <form id="block-form">
+      <input id="block-name" aria-label="Sender name to block" placeholder="Sender name" required maxlength="100" autocomplete="off">
+      <select id="block-mode" aria-label="Messages to hide"><option value="acks">Auto acknowledgements only</option><option value="all">All messages</option></select>
+      <button class="quiet" type="submit">Add</button>
+    </form>
+  </details>
+  <div class="section-label">CHANNELS</div><nav id="channels" aria-label="Channels"></nav>
+  <details class="add-channel"><summary>Add channel</summary><form id="channel-form">
+    <label for="channel-name">Public hashtag channel</label>
+    <input id="channel-name" name="name" placeholder="#test" required maxlength="31" pattern="#[a-z0-9][a-z0-9_\-]{0,29}" autocomplete="off" autocapitalize="none" spellcheck="false">
+    <button id="channel-add" class="quiet" type="submit">Add</button>
+    <p id="channel-status" role="status"></p>
+  </form></details>
+  <div class="section-label section-split"><span>OUR RADIOS</span><span id="owned-count">0</span></div><nav id="owned-nodes" aria-label="Our radios"></nav>
+  <div class="section-label section-split"><span>HEARD</span><span id="contact-count">0</span></div><nav id="contacts" aria-label="Radios and senders heard over LoRa"></nav>
+  </div>
+</aside>
+<main class="chat">
+  <section id="node-details" class="node-details" aria-label="Selected radio observation" hidden></section>
+  <section id="map-view" aria-label="Map of local radio observations" hidden>
+    <div id="node-map" role="region" aria-label="Radio map. Use arrow keys to pan and plus or minus to zoom." tabindex="0"></div>
+    <details class="map-corner map-controls" name="map-panel"><summary>Map controls</summary><div class="map-corner-body">
+    <div class="map-toolbar"><button id="map-fit" type="button" class="quiet">Fit all nodes</button><button id="map-home" type="button" class="quiet">Near home</button><label><input id="map-labels" type="checkbox" checked> Names</label><label>Lines <select id="map-line-mode" aria-label="Map lines"><option value="mine">My adjacent links</option><option value="node">Selected node</option><option value="all">All adjacent links</option><option value="off">Hide lines</option></select></label><span id="map-count" role="status">Loading locations…</span></div>
+    <div id="map-selection" class="map-selection" role="status" hidden></div>
+    </div></details>
+    <details class="map-corner map-info" name="map-panel"><summary>Legend &amp; details</summary><div class="map-corner-body">
+    <div class="map-legend"><span>■ Our radios · ● Other radios · R Receiver</span><span class="activity-active">● Active: seen &lt;1h</span><span class="activity-quiet">● Quiet: 1–2h</span><span class="activity-inactive">○ Possibly inactive: 2h+</span><span>? Unknown</span></div>
+    <div class="map-activity-note">Activity uses received adverts/messages and inferred relay IDs. Silence can mean poor reception; it does not prove a radio is off. Positions may be old.</div>
+    <div class="map-link-legend"><span>Adjacent radios only</span><span class="key-relay">Dashed: relay identity inferred</span><span class="key-direct">Solid: received with no relays</span></div>
+    <details id="map-routes"><summary id="map-route-summary">Listening for relay paths…</summary><p id="map-route-note"></p><ul id="map-route-list"></ul></details>
+    <details id="map-missing"><summary id="map-missing-summary">Location unknown</summary><ul id="map-missing-list"></ul></details>
+    <details class="map-credit"><summary>About the local map</summary><p>Regional overview stored on this computer. Map browsing sends no location requests. Street detail is limited at close zoom; outside the saved region only radio markers are shown.</p></details>
+    <p id="map-attribution" class="map-attribution"></p>
+    </div></details>
+  </section>
+  <div id="search-banner" class="search-banner" hidden></div>
+  <div id="reply-guide" class="reply-guide" hidden title="Dashed connectors suggest replies from @mentions and nearby messages. The radio does not supply confirmed reply links.">↳ Likely replies</div>
+  <div id="messages" class="messages" role="log" aria-label="Conversation messages" aria-live="polite"></div>
+  <div id="error" class="error" role="alert" hidden></div>
+  <form id="composer" class="composer"><div class="compose-box"><label class="sr-only" for="message">Message</label><textarea id="message" rows="2" placeholder="Message Channel…" title="Enter to send · Shift + Enter for a new line" maxlength="560"></textarea><div class="compose-actions"><span id="byte-count">0 / 140 bytes</span><button id="send" type="submit" class="primary" disabled>Send <span aria-hidden="true">↑</span></button></div></div><div class="compose-foot"><span id="audience">Private · Channel key holders only</span></div></form>
+</main>
+<aside id="map-node-panel" class="map-node-panel" aria-label="Selected map radio details">
+ <button id="map-node-toggle" type="button" aria-controls="map-node-content" aria-expanded="false">Radio details</button>
+ <div id="map-node-content"><p>Select a radio on the map to see its connections and details here.</p></div>
+</aside>
+<aside id="radio-panel" class="radio-panel" aria-label="Radio details">
+  <button id="details-close" type="button" class="quiet mobile-details">Close details</button>
+  <header class="chat-header"><div class="channel-avatar" id="conversation-icon">⌂</div><div class="chat-title"><h2 id="conversation-name">Channel</h2><p id="conversation-description">Select a conversation</p></div><button id="export" class="quiet" title="Export this conversation">Export ↓</button></header>
+  <div id="connection-banner" class="banner" role="status">Opening your local workspace…</div>
+  <details id="roof-status" class="roof-status"><summary><strong id="roof-status-title">Repeater · Checking…</strong></summary><span id="roof-status-note">Waiting for local radio observations.</span></details>
+
+ <div class="section-label">YOUR CONNECTION</div>
+ <h2 id="radio-name">Radio</h2><p class="radio-subtitle">Companion radio</p>
+ <div id="connection-pill" class="connection-pill"><span class="dot"></span><span>Not connected</span></div>
+ <button id="connection-button" class="connect-button">Connect radio</button>
+ <details class="radio-diagnostics"><summary>Radio details</summary>
+ <div class="panel-divider"></div><div class="section-split"><h3>Radio health</h3><button id="refresh" class="text-button">Refresh</button></div>
+ <dl class="metrics"><div><dt>Battery voltage</dt><dd id="battery">—</dd></div><div><dt>Uptime</dt><dd id="uptime">—</dd></div><div><dt>Packets received</dt><dd id="rx">—</dd></div><div><dt>Packets sent</dt><dd id="tx">—</dd></div><div><dt>Last signal SNR</dt><dd id="snr">—</dd></div></dl>
+ <p class="muted" id="stats-age">Waiting for the radio</p>
+ <div class="panel-divider"></div><h3>On the air</h3><div class="frequency" id="frequency">—</div><p id="profile" class="muted">Read from your radio</p><div class="firmware"><span>Firmware</span><span id="firmware">—</span></div>
+ <div class="info-note"><strong>Using the phone app?</strong><p>Disconnect here first. This view shows only what this radio heard.</p></div>
+ </details>
+</aside>
+</div>
+<noscript>This messaging app needs JavaScript enabled.</noscript>
+</body></html>

@@ -1,0 +1,45 @@
+{
+  "layers": [
+    {
+      "image": "/maps/overview.jpg",
+      "bounds": [
+        [
+          40.99999999999999,
+          -84.09941950827563
+        ],
+        [
+          46.000000000000014,
+          -74.90058049172438
+        ]
+      ]
+    },
+    {
+      "image": "/maps/region.jpg",
+      "bounds": [
+        [
+          42.5,
+          -80.75875298403955
+        ],
+        [
+          44.399999999999984,
+          -78.14124701596046
+        ]
+      ]
+    },
+    {
+      "image": "/maps/gta.jpg",
+      "bounds": [
+        [
+          43.40000000000002,
+          -79.85522251629877
+        ],
+        [
+          43.95000000000002,
+          -79.09477748370122
+        ]
+      ]
+    }
+  ],
+  "attribution": "Sources: Esri, HERE, Garmin, USGS, Intermap, INCREMENT P, NRCan, Esri Japan, METI, Esri China (Hong Kong), Esri Korea, Esri (Thailand), NGCC, (c) OpenStreetMap contributors, and the GIS User Community",
+  "source": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+}
