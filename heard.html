@@ -8,10 +8,10 @@
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/site.css?v=20260914-white">
 <link rel="stylesheet" href="assets/vendor/leaflet.css">
-<link rel="stylesheet" href="assets/heard.css?v=1">
+<link rel="stylesheet" href="assets/heard.css?v=3">
 <script defer src="assets/vendor/leaflet.js"></script>
-<script defer src="assets/heard-core.js"></script>
-<script defer src="assets/heard.js?v=2"></script>
+<script defer src="assets/heard-core.js?v=3"></script>
+<script defer src="assets/heard.js?v=3"></script>
 </head><body class="heard-page">
 <header class="topbar"><a class="brand" href="./">meshcast<span>.ca</span></a><nav aria-label="Main"><a href="heard.html" aria-current="page">Heard on mesh</a><a href="index.html#roof">Oak Roof</a><a href="profiles.html">Node profiles</a><a href="connect.html">LoRa Connect</a><a href="radio.html">Radio tools</a></nav></header>
 <main class="heard-main">
@@ -20,6 +20,7 @@
     <button id="map-tab" type="button" role="tab" aria-selected="true" aria-controls="map-panel">Map</button>
     <button id="chat-tab" type="button" role="tab" aria-selected="false" aria-controls="chat-panel" tabindex="-1">Public chat</button>
   </div>
+  <div class="heard-layout"><div class="heard-content">
   <section id="map-panel" role="tabpanel" aria-labelledby="map-tab">
     <div class="map-toolbar"><label class="search-label" for="node-search">Find a node</label><input id="node-search" type="search" placeholder="Find a node" autocomplete="off"><button id="gta" class="secondary" type="button">GTA</button><button id="all-nodes" class="secondary" type="button" disabled>All nodes</button></div>
     <p id="map-status" class="note" role="status"></p>
@@ -33,6 +34,33 @@
     <div id="messages"></div>
     <p class="note">Names are self-reported. Signal and hop reports are omitted.</p>
   </section>
+  </div>
+  <aside class="mesh-insights" aria-label="Mesh activity">
+    <section class="insight-card" aria-labelledby="activity-heading">
+      <h2 id="activity-heading">Public activity</h2>
+      <div class="activity-periods" role="group" aria-label="Activity period">
+        <button type="button" data-period="24h" aria-pressed="true">24h</button>
+        <button type="button" data-period="7d" aria-pressed="false">7d</button>
+        <button type="button" data-period="30d" aria-pressed="false">30d</button>
+      </div>
+      <p id="activity-total" class="activity-total">Loading…</p>
+      <div id="activity-chart" aria-label="Public messages by hour"></div>
+      <div class="activity-axis"><span id="activity-start"></span><span>Now</span></div>
+      <p id="activity-detail" class="note" aria-live="polite">Select a bar for details.</p>
+      <p id="activity-history" class="note"></p>
+    </section>
+    <section class="insight-card" aria-labelledby="locations-heading">
+      <h2 id="locations-heading">Radio locations</h2>
+      <div class="location-totals"><div><strong id="mapped-total">—</strong><span>Mapped</span></div><div><strong id="unknown-total">—</strong><span>Unknown</span></div></div>
+      <div class="location-ratio" aria-hidden="true"><span id="mapped-ratio"></span></div>
+      <p class="note">Advertised in the past 7 days</p>
+    </section>
+    <section class="insight-card" aria-labelledby="arrivals-heading">
+      <h2 id="arrivals-heading">New arrivals</h2>
+      <p class="note">First heard here · past 7 days</p>
+      <ul id="arrivals-list"></ul>
+    </section>
+  </aside></div>
   <noscript><p>Enable JavaScript to view the map and public messages.</p></noscript>
 </main>
 <footer><p>Meshcast · MeshCore in the GTA</p><a href="https://github.com/steveseguin/oak">Source &amp; contributions</a></footer>

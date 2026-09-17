@@ -3,6 +3,7 @@
   const $ = id => document.getElementById(id), core = window.MeshcastHeard;
   let data = null, map = null, layer = null, rendered = '', loading = false, failed = false;
   const gta = [43.75, -79.45];
+  let activityPeriod = '24h';
   function element(tag, text, className) {
     const el = document.createElement(tag);
     if (text !== undefined) el.textContent = text;
@@ -68,6 +69,56 @@
     }));
     if (!data.messages.length) $('messages').append(element('p', 'No public messages in this snapshot.', 'note'));
   }
+  function renderActivity() {
+    const bins = core.activityBins(data?.activity, activityPeriod);
+    const total = bins.reduce((sum,b) => sum + b.count, 0);
+    const maximum = Math.max(1, ...bins.map(b => b.count));
+    $('activity-total').textContent = bins.length ? total.toLocaleString() + ' messages' : 'History unavailable';
+    $('activity-chart').setAttribute('aria-label', activityPeriod === '24h' ? 'Public messages by hour' : 'Public messages by day');
+    $('activity-chart').replaceChildren(...bins.map(bin => {
+      const label = bin.label + ': ' + (bin.known ? bin.count + ' messages' + (bin.partial ? ' · partial' : '') : 'no saved history');
+      const button = element('button', undefined, 'activity-bar' + (!bin.known ? ' no-history' : ''));
+      button.type = 'button'; button.title = label; button.setAttribute('aria-label', label);
+      const fill = element('span');
+      fill.style.height = bin.known ? (bin.count ? Math.max(3, bin.count / maximum * 100) : 1) + '%' : '100%';
+      button.append(fill);
+      const detail = () => { $('activity-detail').textContent = label; };
+      button.addEventListener('click', detail); button.addEventListener('focus', detail);
+      button.addEventListener('mouseenter', detail);
+      return button;
+    }));
+    $('activity-start').textContent = activityPeriod === '24h' ? '24h ago' : activityPeriod === '7d' ? '6 days ago' : '29 days ago';
+    $('activity-detail').textContent = 'Select a bar for details.';
+    const since = data?.activity?.since;
+    $('activity-history').textContent = since == null ? 'History builds as messages arrive.' : 'History since ' + new Intl.DateTimeFormat('en-CA',
+      {timeZone:'America/Toronto', month:'short', day:'numeric'}).format(new Date(since * 1000)) + ' · Toronto time';
+  }
+  function renderInsights() {
+    renderActivity();
+    const counts = data.locations;
+    $('mapped-total').textContent = counts ? counts.mapped.toLocaleString() : '—';
+    $('unknown-total').textContent = counts ? counts.unknown.toLocaleString() : '—';
+    $('mapped-ratio').style.width = counts && counts.mapped + counts.unknown ? (100 * counts.mapped / (counts.mapped + counts.unknown)) + '%' : '0%';
+    $('arrivals-list').replaceChildren(...(data.arrivals || []).map(arrival => {
+      const li = element('li'), button = element('button', undefined, 'arrival-link');
+      button.type = 'button';
+      const time = element('time', core.age(arrival.first_seen));
+      time.dataset.stamp = arrival.first_seen; time.dataset.basis = 'First heard';
+      time.dateTime = new Date(arrival.first_seen * 1000).toISOString();
+      time.title = 'First heard here: ' + new Date(arrival.first_seen * 1000).toLocaleString();
+      button.append(element('span', arrival.name), time);
+      button.addEventListener('click', () => {
+        $('node-search').value = ''; show('map');
+        if (map) {
+          map.setView(arrival.position, 12);
+          L.popup().setLatLng(arrival.position).setContent(element('strong', arrival.name)).openOn(map);
+          $('public-map').scrollIntoView({block:'nearest'});
+        }
+      });
+      li.append(button); return li;
+    }));
+    if (!data.arrivals?.length) $('arrivals-list').append(element('li', 'No recent arrivals.', 'note'));
+  }
   function freshness() {
     if (!data) return;
     const stale = Date.now() / 1000 - data.published_at > 3600;
@@ -77,7 +128,7 @@
     $('freshness').title = new Date(data.published_at * 1000).toLocaleString();
     document.querySelectorAll('time[data-stamp]').forEach(el => {
       el.textContent = core.age(Number(el.dataset.stamp));
-      el.setAttribute('aria-label', 'Retrieved ' + (el.textContent === 'now' ? 'just now' : el.textContent + ' ago'));
+      el.setAttribute('aria-label', (el.dataset.basis || 'Retrieved') + ' ' + (el.textContent === 'now' ? 'just now' : el.textContent + ' ago'));
     });
   }
   async function refresh() {
@@ -90,7 +141,7 @@
       const signature = JSON.stringify(next);
       data = next;
       failed = false;
-      if (signature !== rendered) { renderNodes(); renderMessages(); rendered = signature; }
+      if (signature !== rendered) { renderNodes(); renderMessages(); renderInsights(); rendered = signature; }
       freshness();
     } catch (_) {
       failed = true;
@@ -118,6 +169,11 @@
     });
   }
   $('node-search').addEventListener('input', renderNodes);
+  document.querySelectorAll('[data-period]').forEach(button => button.addEventListener('click', () => {
+    activityPeriod = button.dataset.period;
+    document.querySelectorAll('[data-period]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+    renderActivity();
+  }));
   $('gta').addEventListener('click', () => { if (map) map.setView(gta, 9); });
   $('all-nodes').addEventListener('click', () => {
     const query = $('node-search').value.trim().toLocaleLowerCase();

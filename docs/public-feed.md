@@ -11,7 +11,8 @@ as text, including strings that resemble HTML.
 
 ## Snapshot contract
 
-Top-level fields: `version: 1`, `published_at` (Unix seconds), `nodes`, `messages`.
+Top-level fields: `version: 1`, `published_at` (Unix seconds), `nodes`, `messages`,
+`activity`, `arrivals`, `locations`. Older viewers can ignore the added fields.
 
 - A node contains only `name` and `position: [latitude, longitude]`.
 - A message contains only `name`, `text`, `received_at` (Unix seconds, rounded
@@ -31,6 +32,39 @@ Top-level fields: `version: 1`, `published_at` (Unix seconds), `nodes`, `message
 - No keys, contact cards, hops, signal readings, distances, routes or receiver
   metadata are present, including in hidden fields. The browser never downloads
   a full private response and then hides fields.
+
+## Activity and arrivals
+
+The sidebar has 24-hour, 7-day and 30-day activity views. Activity counts every
+eligible incoming public-chat message, using the same content/ownership filter
+as chat, including messages outside the 200-message display limit. It counts
+locally retrieved messages, not all RF packets or network-wide traffic.
+
+`activity.hours` contains sparse `[UTC hour start, count]` pairs for a rolling
+366 days. `since` is the earliest retained eligible message's hour, or null;
+`through` is the current snapshot hour. Totals are rebuilt from the existing
+durable local SQLite history on each export, so retries/reloads never double
+count and existing history is included. No older message bodies are added to
+the public feed. Month views gain history automatically; the source database
+is not pruned or modified. No-history periods before `since` are hatched rather
+than represented as observed zero traffic. Zero within the recorded period
+means no eligible messages saved, which can include collector downtime.
+
+Daily bars use America/Toronto calendar days, including daylight-saving changes.
+The current hour/day and earliest recorded hour/day are marked partial in bar
+details. The 24h view has 24 hourly buckets, including the current partial hour.
+
+`locations` contains `mapped` and `unknown` counts. Unknown means a recent
+firmware-accepted advert without a usable recent advertised location; it does
+not assert that the owner deliberately hid it. Channel-name-only identities
+and private-message-only contacts are excluded from these node totals.
+
+`arrivals` contains up to six mapped radios first heard in the past seven days,
+newest first, with only `name`, `position`, and minute-rounded `first_seen`.
+It uses original first-heard time, not most recent reception; private-message
+influenced records and owned radios are excluded. Clicking an arrival selects
+its advertised location. A new arrival is new to this receiver's saved history,
+not necessarily a new radio on the network.
 
 The local publisher reads SQLite in read-only mode and constructs this small
 allowlist. It does not use the private `/api/map` endpoint or connect to a radio.
