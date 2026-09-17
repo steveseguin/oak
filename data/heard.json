@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789604724,
+  "published_at": 1789605624,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -241,6 +241,13 @@
       ]
     },
     {
+      "name": "Clay | CNYMeshcore",
+      "position": [
+        43.16127,
+        -76.13937
+      ]
+    },
+    {
       "name": "Clearview 🅱️",
       "position": [
         43.49573,
@@ -364,6 +371,13 @@
       "position": [
         43.50291,
         -79.87902
+      ]
+    },
+    {
+      "name": "Hilton - Repeater",
+      "position": [
+        43.27764,
+        -77.89229
       ]
     },
     {
@@ -1293,8 +1307,8 @@
     {
       "name": "🚭Asbestos Observer",
       "position": [
-        44.10228,
-        -77.58416
+        44.09788,
+        -77.57368
       ]
     },
     {
@@ -1355,6 +1369,46 @@
     }
   ],
   "messages": [
+    {
+      "name": "KJMtdk",
+      "text": "Excellent how far from buffalo?",
+      "received_at": 1789605360
+    },
+    {
+      "name": "🥦broccoli",
+      "text": "Belleville,On",
+      "received_at": 1789605360
+    },
+    {
+      "name": "🆒️TP-Subcooled",
+      "text": "Trenton ont",
+      "received_at": 1789605300
+    },
+    {
+      "name": "KJMtdk",
+      "text": "Goin good here in Lockport. Where are u?",
+      "received_at": 1789605300
+    },
+    {
+      "name": "🆒️TP-Subcooled",
+      "text": "@[KJMtdk]  how's it going ?",
+      "received_at": 1789605240
+    },
+    {
+      "name": "KJMtdk",
+      "text": "Hey Sub!",
+      "received_at": 1789605240
+    },
+    {
+      "name": "🆒️TP-Subcooled",
+      "text": "Hello",
+      "received_at": 1789605180
+    },
+    {
+      "name": "🔅Air.In",
+      "text": "Evening",
+      "received_at": 1789605180
+    },
     {
       "name": "🆒️TP-Subcooled",
       "text": "Evening !",
