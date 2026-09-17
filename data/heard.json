@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789620924,
+  "published_at": 1789621824,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -749,6 +749,13 @@
       "position": [
         43.66539,
         -79.40358
+      ]
+    },
+    {
+      "name": "QueenN1WSlkyTech",
+      "position": [
+        43.45418,
+        -80.48649
       ]
     },
     {
@@ -1955,7 +1962,7 @@
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789617600,
+    "through": 1789621200,
     "hours": [
       [
         1789347600,
@@ -2141,6 +2148,14 @@
   },
   "arrivals": [
     {
+      "name": "QueenN1WSlkyTech",
+      "position": [
+        43.45418,
+        -80.48649
+      ],
+      "first_seen": 1789621440
+    },
+    {
       "name": "YKF_Moe",
       "position": [
         43.52488,
@@ -2179,18 +2194,10 @@
         -79.68395
       ],
       "first_seen": 1789613700
-    },
-    {
-      "name": "🍉Watermelon",
-      "position": [
-        44.15505,
-        -77.40527
-      ],
-      "first_seen": 1789607940
     }
   ],
   "locations": {
-    "mapped": 204,
+    "mapped": 205,
     "unknown": 42
   }
 }
