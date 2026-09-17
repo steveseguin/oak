@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789648824,
+  "published_at": 1789649724,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -294,6 +294,13 @@
       "position": [
         43.65815,
         -79.37787
+      ]
+    },
+    {
+      "name": "FNA-0🌲👽",
+      "position": [
+        43.5876,
+        -79.61488
       ]
     },
     {
@@ -1559,6 +1566,21 @@
   ],
   "messages": [
     {
+      "name": "Fuzz Factor GO",
+      "text": "Morning superstars! :)",
+      "received_at": 1789648980
+    },
+    {
+      "name": "va3rjs-1 🇨🇦",
+      "text": "@[Ricastro] heard in Northern Halton",
+      "received_at": 1789648980
+    },
+    {
+      "name": "Ricastro",
+      "text": "Mobile test",
+      "received_at": 1789648980
+    },
+    {
       "name": "va3rjs-1 🇨🇦",
       "text": "@[parket] yup, mayhave to go for a drive and see if i can see an outdoor node",
       "received_at": 1789648500
@@ -2346,7 +2368,7 @@
       ],
       [
         1789646400,
-        8
+        11
       ]
     ]
   },
@@ -2401,7 +2423,7 @@
     }
   ],
   "locations": {
-    "mapped": 222,
-    "unknown": 47
+    "mapped": 223,
+    "unknown": 46
   }
 }
