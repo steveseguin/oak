@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789606524,
+  "published_at": 1789607424,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -371,6 +371,13 @@
       "position": [
         43.50291,
         -79.87902
+      ]
+    },
+    {
+      "name": "Heltec Repeater MDT",
+      "position": [
+        43.51199,
+        -79.88436
       ]
     },
     {
@@ -1370,6 +1377,41 @@
   ],
   "messages": [
     {
+      "name": "BUSHOUTDOORS_CANADA",
+      "text": "f3ac75d3b3ece36f1da546c047497a97",
+      "received_at": 1789607100
+    },
+    {
+      "name": "🐰carroty🥕",
+      "text": "that escalated quickly!",
+      "received_at": 1789606920
+    },
+    {
+      "name": "BUSHOUTDOORS_CANADA",
+      "text": "I was meaning what exit 62 or 37",
+      "received_at": 1789606740
+    },
+    {
+      "name": "BUSHOUTDOORS_CANADA",
+      "text": "JK",
+      "received_at": 1789606620
+    },
+    {
+      "name": "🥦broccoli",
+      "text": "@[BUSHOUTDOORS_CANADA] aww she’ll know ! ♥️",
+      "received_at": 1789606620
+    },
+    {
+      "name": "BUSHOUTDOORS_CANADA",
+      "text": "@[🥦broccoli] mom is dead.  Tx",
+      "received_at": 1789606620
+    },
+    {
+      "name": "🥦broccoli",
+      "text": "@[BUSHOUTDOORS_CANADA] ur moms",
+      "received_at": 1789606560
+    },
+    {
       "name": "KJMtdk",
       "text": "I don't think I have the time 🤣",
       "received_at": 1789606500
@@ -1888,26 +1930,242 @@
       "name": "🔅Air.In",
       "text": "@[AM Mesh 2] howdy",
       "received_at": 1789521120
-    },
-    {
-      "name": "VE3RTU",
-      "text": "@[AM Mesh 2] hello from pickering",
-      "received_at": 1789520640
-    },
-    {
-      "name": "va3rjs-1 🇨🇦",
-      "text": "@[Krycek] ya we enjoyed the park and the area….we will be back next summer",
-      "received_at": 1789520520
-    },
-    {
-      "name": "AM Mesh 2",
-      "text": "Hello all",
-      "received_at": 1789520460
-    },
-    {
-      "name": "Krycek",
-      "text": "Hello Virginia.",
-      "received_at": 1789520160
     }
-  ]
+  ],
+  "activity": {
+    "since": 1789347600,
+    "through": 1789606800,
+    "hours": [
+      [
+        1789347600,
+        2
+      ],
+      [
+        1789358400,
+        3
+      ],
+      [
+        1789380000,
+        2
+      ],
+      [
+        1789387200,
+        5
+      ],
+      [
+        1789390800,
+        1
+      ],
+      [
+        1789398000,
+        2
+      ],
+      [
+        1789401600,
+        2
+      ],
+      [
+        1789405200,
+        4
+      ],
+      [
+        1789412400,
+        3
+      ],
+      [
+        1789423200,
+        5
+      ],
+      [
+        1789426800,
+        5
+      ],
+      [
+        1789430400,
+        4
+      ],
+      [
+        1789434000,
+        6
+      ],
+      [
+        1789437600,
+        7
+      ],
+      [
+        1789441200,
+        1
+      ],
+      [
+        1789444800,
+        3
+      ],
+      [
+        1789473600,
+        7
+      ],
+      [
+        1789477200,
+        5
+      ],
+      [
+        1789480800,
+        4
+      ],
+      [
+        1789484400,
+        1
+      ],
+      [
+        1789488000,
+        4
+      ],
+      [
+        1789491600,
+        28
+      ],
+      [
+        1789495200,
+        14
+      ],
+      [
+        1789502400,
+        6
+      ],
+      [
+        1789506000,
+        11
+      ],
+      [
+        1789509600,
+        5
+      ],
+      [
+        1789513200,
+        15
+      ],
+      [
+        1789516800,
+        7
+      ],
+      [
+        1789520400,
+        10
+      ],
+      [
+        1789524000,
+        1
+      ],
+      [
+        1789552800,
+        2
+      ],
+      [
+        1789556400,
+        7
+      ],
+      [
+        1789563600,
+        6
+      ],
+      [
+        1789567200,
+        3
+      ],
+      [
+        1789570800,
+        7
+      ],
+      [
+        1789574400,
+        2
+      ],
+      [
+        1789581600,
+        2
+      ],
+      [
+        1789585200,
+        15
+      ],
+      [
+        1789588800,
+        4
+      ],
+      [
+        1789592400,
+        23
+      ],
+      [
+        1789596000,
+        7
+      ],
+      [
+        1789599600,
+        4
+      ],
+      [
+        1789603200,
+        19
+      ],
+      [
+        1789606800,
+        2
+      ]
+    ]
+  },
+  "arrivals": [
+    {
+      "name": "Heltec Repeater MDT",
+      "position": [
+        43.51199,
+        -79.88436
+      ],
+      "first_seen": 1789606800
+    },
+    {
+      "name": "Clay | CNYMeshcore",
+      "position": [
+        43.16127,
+        -76.13937
+      ],
+      "first_seen": 1789605000
+    },
+    {
+      "name": "Hilton - Repeater",
+      "position": [
+        43.27764,
+        -77.89229
+      ],
+      "first_seen": 1789604700
+    },
+    {
+      "name": "Lakeview Repeater",
+      "position": [
+        43.86175,
+        -78.859
+      ],
+      "first_seen": 1789603560
+    },
+    {
+      "name": "Mr fUggly repeater",
+      "position": [
+        43.02287,
+        -79.24391
+      ],
+      "first_seen": 1789602780
+    },
+    {
+      "name": "BuffaLoRa.org SnyderMes",
+      "position": [
+        42.96522,
+        -78.7782
+      ],
+      "first_seen": 1789601820
+    }
+  ],
+  "locations": {
+    "mapped": 196,
+    "unknown": 43
+  }
 }
