@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789682124,
+  "published_at": 1789683024,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -819,6 +819,13 @@
       "position": [
         43.60415,
         -79.67446
+      ]
+    },
+    {
+      "name": "Pfarner Hill",
+      "position": [
+        42.62,
+        -78.74926
       ]
     },
     {
@@ -2040,26 +2047,11 @@
       "name": "MeowCore Mewbile",
       "text": "good afternoon meshies",
       "received_at": 1789597920
-    },
-    {
-      "name": "KE2GUZ Pocket",
-      "text": "Good ole rochester.",
-      "received_at": 1789596300
-    },
-    {
-      "name": "Gozer27",
-      "text": "@[MeshBOB] Rochester NY!",
-      "received_at": 1789595940
-    },
-    {
-      "name": "KO4DHP",
-      "text": "@[N2JRS T1000e] thanks for the reply",
-      "received_at": 1789595760
     }
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789678800,
+    "through": 1789682400,
     "hours": [
       [
         1789347600,
@@ -2297,6 +2289,14 @@
   },
   "arrivals": [
     {
+      "name": "Pfarner Hill",
+      "position": [
+        42.62,
+        -78.74926
+      ],
+      "first_seen": 1789682460
+    },
+    {
       "name": "St Mikes 🅱️",
       "position": [
         43.68519,
@@ -2335,18 +2335,10 @@
         -78.73897
       ],
       "first_seen": 1789643040
-    },
-    {
-      "name": "Louth Station",
-      "position": [
-        43.10327,
-        -79.2976
-      ],
-      "first_seen": 1789640700
     }
   ],
   "locations": {
-    "mapped": 226,
+    "mapped": 227,
     "unknown": 50
   }
 }
