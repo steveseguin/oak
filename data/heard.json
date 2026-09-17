@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789640724,
+  "published_at": 1789641624,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -588,6 +588,13 @@
       "position": [
         43.52856,
         -79.63546
+      ]
+    },
+    {
+      "name": "Louth Station",
+      "position": [
+        43.10327,
+        -79.2976
       ]
     },
     {
@@ -1538,6 +1545,16 @@
   ],
   "messages": [
     {
+      "name": "N2YJJ",
+      "text": "Good morning from Middleport NY",
+      "received_at": 1789640880
+    },
+    {
+      "name": "🆒️TP-Subcooled",
+      "text": "@[base@catparty.ca] good morning Niagara",
+      "received_at": 1789640820
+    },
+    {
       "name": "RoyalToast🌶️",
       "text": "👀👀rip",
       "received_at": 1789637700
@@ -2279,10 +2296,22 @@
       [
         1789635600,
         5
+      ],
+      [
+        1789639200,
+        2
       ]
     ]
   },
   "arrivals": [
+    {
+      "name": "Louth Station",
+      "position": [
+        43.10327,
+        -79.2976
+      ],
+      "first_seen": 1789640700
+    },
     {
       "name": "Plainfield",
       "position": [
@@ -2322,18 +2351,10 @@
         -77.37075
       ],
       "first_seen": 1789635060
-    },
-    {
-      "name": "⚡️ GTN 99",
-      "position": [
-        44.25672,
-        -76.95469
-      ],
-      "first_seen": 1789633140
     }
   ],
   "locations": {
-    "mapped": 219,
+    "mapped": 220,
     "unknown": 46
   }
 }
