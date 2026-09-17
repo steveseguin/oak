@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789618224,
+  "published_at": 1789619124,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1256,6 +1256,13 @@
       ]
     },
     {
+      "name": "⚡️ GTN South Shore",
+      "position": [
+        44.08088,
+        -77.0113
+      ]
+    },
+    {
       "name": "⛽️Sump Pump",
       "position": [
         44.09326,
@@ -2127,6 +2134,14 @@
   },
   "arrivals": [
     {
+      "name": "⚡️ GTN South Shore",
+      "position": [
+        44.08088,
+        -77.0113
+      ],
+      "first_seen": 1789618440
+    },
+    {
       "name": "Tosho Sweep",
       "position": [
         43.00834,
@@ -2165,18 +2180,10 @@
         -77.38302
       ],
       "first_seen": 1789607700
-    },
-    {
-      "name": "Heltec Repeater MDT",
-      "position": [
-        43.51199,
-        -79.88436
-      ],
-      "first_seen": 1789606800
     }
   ],
   "locations": {
-    "mapped": 202,
+    "mapped": 203,
     "unknown": 42
   }
 }
