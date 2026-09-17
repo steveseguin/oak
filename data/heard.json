@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789675824,
+  "published_at": 1789676724,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1580,6 +1580,11 @@
   ],
   "messages": [
     {
+      "name": "EAO",
+      "text": "@[Roger Va3hpr] rx from Dundas Station",
+      "received_at": 1789676400
+    },
+    {
       "name": "🍀LKY.trk",
       "text": "@[Roger Va3hpr] advert your node. For a direct comms",
       "received_at": 1789671660
@@ -2377,6 +2382,10 @@
       [
         1789671600,
         2
+      ],
+      [
+        1789675200,
+        1
       ]
     ]
   },
