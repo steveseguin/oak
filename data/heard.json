@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789684824,
+  "published_at": 1789685724,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -2057,11 +2057,6 @@
       "name": "MeshNerd🤓",
       "text": "Anyone try meshpoint?",
       "received_at": 1789599300
-    },
-    {
-      "name": "N0LSD",
-      "text": "Good evening, y'all.  Bills game tomorrow...",
-      "received_at": 1789599000
     }
   ],
   "activity": {
