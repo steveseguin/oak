@@ -51,7 +51,7 @@ class Advert {
         if(type === Advert.ADV_TYPE_REPEATER) return "REPEATER";
         if(type === Advert.ADV_TYPE_ROOM) return "ROOM";
         if(type === Advert.ADV_TYPE_SENSOR) return "SENSOR";
-        
+
         return null;
     }
 
