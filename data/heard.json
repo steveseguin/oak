@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789679424,
+  "published_at": 1789680324,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -2140,11 +2140,6 @@
       "name": "VE3VVZ",
       "text": "@[VE3RTU] hiya good to see the message…all working",
       "received_at": 1789594440
-    },
-    {
-      "name": "VE3RTU",
-      "text": "@[VE3VVZ] good afternoon",
-      "received_at": 1789593060
     }
   ],
   "activity": {
