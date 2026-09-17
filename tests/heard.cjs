@@ -43,4 +43,19 @@ assert.throws(()=>core.validate({...data, activity:{since:through,through,hours:
 assert.throws(()=>core.validate({...data, activity:{since:through,through,hours:[[through,1],[through,2]]}}));
 assert.throws(()=>core.validate({...data, arrivals:[{name:'Private',position:[43,-79],first_seen:through}]}));
 assert.throws(()=>core.validate({...data, locations:{mapped:99,unknown:1}}));
+const countInside = (points,size,center) => points.filter(p => Math.abs(p.x-center.x) <= size.x/2+1e-7 && Math.abs(p.y-center.y) <= size.y/2+1e-7).length;
+assert.deepEqual(core.bestMapCenter([], {x:10,y:10}, {x:7,y:9}), {x:7,y:9});
+const cluster = [{x:0,y:0},{x:2,y:2},{x:4,y:4},{x:100,y:100}];
+assert.equal(countInside(cluster,{x:10,y:10},core.bestMapCenter(cluster,{x:10,y:10},{x:90,y:90})),3);
+assert.deepEqual(core.bestMapCenter([{x:0,y:0},{x:100,y:100}],{x:10,y:10},{x:100,y:100}),{x:100,y:100});
+assert.deepEqual(core.bestMapCenter([{x:0,y:0},{x:10,y:10}],{x:10,y:10},{x:5,y:5}),{x:5,y:5});
+// Compare the optimizer with exhaustive boundary candidates on small point sets.
+let seed=17;
+const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed%100;};
+for(let trial=0;trial<35;trial++) {
+  const points=Array.from({length:12},()=>({x:random(),y:random()})),size={x:20,y:15},reference={x:50,y:50};
+  let maximum=0;
+  for(const p of points)for(const q of points) maximum=Math.max(maximum,countInside(points,size,{x:p.x+size.x/2,y:q.y+size.y/2}));
+  assert.equal(countInside(points,size,core.bestMapCenter(points,size,reference)),maximum);
+}
 console.log('Passed public snapshot schema, time labels, invalid-data handling, safe text rendering and same-origin read-only feed checks.');

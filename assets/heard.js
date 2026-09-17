@@ -3,6 +3,8 @@
   const $ = id => document.getElementById(id), core = window.MeshcastHeard;
   let data = null, map = null, layer = null, rendered = '', loading = false, failed = false;
   const gta = [43.75, -79.45];
+  const startingCenter = [43.55576, -78.62509], startingZoom = 9;
+  let initialFrameDone = false;
   let activityPeriod = '24h';
   function element(tag, text, className) {
     const el = document.createElement(tag);
@@ -13,12 +15,25 @@
   function ensureMap() {
     if (map) return;
     if (!window.L) { $('map-status').textContent = 'Map unavailable. Node names are listed below.'; return; }
-    map = L.map('public-map', {minZoom: 2, maxZoom: 18, scrollWheelZoom: true}).setView(gta, 9);
+    map = L.map('public-map', {minZoom: 2, maxZoom: 18, scrollWheelZoom: true}).setView(startingCenter, startingZoom);
+    // An interaction before the first data load also cancels automatic framing.
+    for (const event of ['pointerdown', 'wheel', 'keydown']) {
+      $('public-map').addEventListener(event, () => { initialFrameDone = true; }, {passive:true});
+    }
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).on('tileerror', () => { $('tiles-status').hidden = false; }).addTo(map);
     layer = L.layerGroup().addTo(map);
     new ResizeObserver(() => { if (!$('map-panel').hidden) map.invalidateSize({animate: false}); }).observe($('public-map'));
+  }
+  function frameInitialMap() {
+    if (initialFrameDone || !map || $('map-panel').hidden || !data?.nodes.length) return;
+    const size = map.getSize(), zoom = map.getZoom();
+    if (size.x <= 48 || size.y <= 48) return;
+    const center = core.bestMapCenter(data.nodes.map(n => map.project(n.position, zoom)),
+      {x:size.x-48, y:size.y-48}, map.project(startingCenter, zoom));
+    initialFrameDone = true;
+    map.panTo(map.unproject([center.x, center.y], zoom), {animate:false});
   }
   function renderNodes() {
     if (!data) return;
@@ -51,6 +66,7 @@
       });
       li.append(button); return li;
     }));
+    frameInitialMap();
   }
   function renderMessages() {
     if (!data) return;
@@ -174,7 +190,7 @@
     document.querySelectorAll('[data-period]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
     renderActivity();
   }));
-  $('gta').addEventListener('click', () => { if (map) map.setView(gta, 9); });
+  $('gta').addEventListener('click', () => { initialFrameDone = true; if (map) map.setView(gta, 9); });
   $('all-nodes').addEventListener('click', () => {
     const query = $('node-search').value.trim().toLocaleLowerCase();
     const nodes = data.nodes.filter(n => n.name.toLocaleLowerCase().includes(query));

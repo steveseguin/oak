@@ -84,7 +84,33 @@
     // Dark text on a pale background; many tones without low-contrast labels.
     return 'hsl(' + hash % 360 + ' ' + (35 + (hash >>> 9) % 31) + '% ' + (91 + (hash >>> 17) % 5) + '%)';
   }
-  const api = {age, validate, color, activityBins};
+  // Find the most points inside a fixed-size viewport, without changing scale.
+  // For equally populated windows, keep the center closest to the reference.
+  function bestMapCenter(points, size, preferred) {
+    const width = Math.max(1, size.x), height = Math.max(1, size.y);
+    const ordered = points.filter(p => Number.isFinite(p.x) && Number.isFinite(p.y)).sort((a,b) => a.y - b.y);
+    const leftEdges = [...new Set(ordered.map(p => p.x))];
+    let best = {x:preferred.x, y:preferred.y}, bestCount = 0, bestDistance = Infinity;
+    for (const left of leftEdges) {
+      const column = ordered.filter(p => p.x >= left && p.x <= left + width);
+      let end = 0;
+      for (let start = 0; start < column.length; start++) {
+        while (end < column.length && column[end].y <= column[start].y + height) end++;
+        const count = end - start;
+        if (count < bestCount) continue;
+        let minX = Infinity, maxX = -Infinity;
+        for (let i = start; i < end; i++) { minX = Math.min(minX, column[i].x); maxX = Math.max(maxX, column[i].x); }
+        const x = Math.max(maxX - width/2, Math.min(minX + width/2, preferred.x));
+        const y = Math.max(column[end-1].y - height/2, Math.min(column[start].y + height/2, preferred.y));
+        const distance = (x-preferred.x)**2 + (y-preferred.y)**2;
+        if (count > bestCount || distance < bestDistance) {
+          best = {x,y}; bestCount = count; bestDistance = distance;
+        }
+      }
+    }
+    return best;
+  }
+  const api = {age, validate, color, activityBins, bestMapCenter};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.MeshcastHeard = api;
 })(typeof window !== 'undefined' ? window : globalThis);

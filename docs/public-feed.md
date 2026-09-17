@@ -4,8 +4,13 @@
 database, login, radio connection, geolocation request or local-network request
 is needed. The existing homepage and antenna photo are preserved.
 
-The default map center is the GTA, `[43.75, -79.45]`, zoom 9. Updates never
-recenter a visitor's map. GTA resets the view; All nodes fits the filtered set.
+The default map starts at zoom 9, using Steve's Lake Ontario view,
+`[43.55576, -78.62509]`, as its reference. On the first visible nonempty load it
+pans at the same zoom to include the most public nodes in the available map
+area, with 24px edge clearance. Ties choose the center nearest the reference.
+Later data updates, tab switches and resizes do not repeat automatic framing;
+an early pointer, wheel or keyboard interaction cancels it. GTA explicitly
+resets to `[43.75, -79.45]`, zoom 9; All nodes fits the filtered set.
 Names can be searched or selected in the node list. Names and chat are rendered
 as text, including strings that resemble HTML.
 
