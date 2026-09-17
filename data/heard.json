@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789619124,
+  "published_at": 1789620924,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1207,6 +1207,13 @@
       ]
     },
     {
+      "name": "YKF_Moe",
+      "position": [
+        43.52488,
+        -80.2494
+      ]
+    },
+    {
       "name": "YYZ-SCARBOROUGH-OBV",
       "position": [
         43.76139,
@@ -2134,6 +2141,14 @@
   },
   "arrivals": [
     {
+      "name": "YKF_Moe",
+      "position": [
+        43.52488,
+        -80.2494
+      ],
+      "first_seen": 1789620840
+    },
+    {
       "name": "⚡️ GTN South Shore",
       "position": [
         44.08088,
@@ -2172,18 +2187,10 @@
         -77.40527
       ],
       "first_seen": 1789607940
-    },
-    {
-      "name": "Lions Park Moira river",
-      "position": [
-        44.17155,
-        -77.38302
-      ],
-      "first_seen": 1789607700
     }
   ],
   "locations": {
-    "mapped": 203,
+    "mapped": 204,
     "unknown": 42
   }
 }
