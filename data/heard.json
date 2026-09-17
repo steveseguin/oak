@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789683024,
+  "published_at": 1789683924,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1594,6 +1594,36 @@
   ],
   "messages": [
     {
+      "name": "VIRUS CORE 1W",
+      "text": "@[FLAN] Thanks FLAN!",
+      "received_at": 1789683600
+    },
+    {
+      "name": "VIRUS CORE 1W",
+      "text": "@[Fuzz Factor] LOL........KAAARRRRS!..... wonder if the spam is making a  migration?",
+      "received_at": 1789683600
+    },
+    {
+      "name": "FLAN",
+      "text": "@[VIRUS CORE 1W] screwed up or not, read you loud and clear.!",
+      "received_at": 1789683540
+    },
+    {
+      "name": "VIRUS CORE 1W",
+      "text": "@[Fuzz Factor] Thanks FUZZY!..... Yah \"too smart\"  power management  is now creating a problem....Weird 'cause I didn't  do anything.",
+      "received_at": 1789683480
+    },
+    {
+      "name": "Fuzz Factor",
+      "text": "@[VIRUS CORE 1W] I hope your node critter gets well soon :)",
+      "received_at": 1789683300
+    },
+    {
+      "name": "VIRUS CORE 1W",
+      "text": "Hey CORE!...... Node is doing some screwball shenanigans.... Send it!....One love!",
+      "received_at": 1789683120
+    },
+    {
       "name": "Roger Va3hpr",
       "text": "We are getting some light rain here in Etobicoke",
       "received_at": 1789680540
@@ -2284,6 +2314,10 @@
       [
         1789678800,
         1
+      ],
+      [
+        1789682400,
+        6
       ]
     ]
   },
