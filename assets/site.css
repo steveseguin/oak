@@ -49,7 +49,7 @@ p:last-child { margin-bottom: 0; }
 .section-heading { max-width: 750px; margin-bottom: 1.5rem; }
 .section-heading > p:last-child { color: var(--muted); }
 .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
-.tools { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .card { min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
 .card p { color: var(--muted); }
 .card .button { margin-top: .5rem; }
