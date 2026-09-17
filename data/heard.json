@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789614624,
+  "published_at": 1789618224,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1419,6 +1419,11 @@
   ],
   "messages": [
     {
+      "name": "Tdot 🤖",
+      "text": "📣 Welcome! Try #help #test #jays. Please no bots in public, 3Byte in Canada, Repeaters use regions meshcore.ca/config/ Join discord.gg/wSHbeb86r4",
+      "received_at": 1789617600
+    },
+    {
       "name": "BUSHOUTDOORS_CANADA",
       "text": "f3ac75d3b3ece36f1da546c047497a97",
       "received_at": 1789607100
@@ -1936,7 +1941,7 @@
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789614000,
+    "through": 1789617600,
     "hours": [
       [
         1789347600,
@@ -2113,6 +2118,10 @@
       [
         1789606800,
         2
+      ],
+      [
+        1789617600,
+        1
       ]
     ]
   },
