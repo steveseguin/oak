@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789642524,
+  "published_at": 1789643424,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1347,6 +1347,13 @@
       ]
     },
     {
+      "name": "☀️Boston Valley 1W",
+      "position": [
+        42.64453,
+        -78.73897
+      ]
+    },
+    {
       "name": "☑️ BLACKBOX",
       "position": [
         44.23802,
@@ -1544,6 +1551,11 @@
     }
   ],
   "messages": [
+    {
+      "name": "BUSHOUTDOORS_CANADA",
+      "text": "Good morning from Ajax Ont",
+      "received_at": 1789643340
+    },
     {
       "name": "N2YJJ",
       "text": "Good morning from Middleport NY",
@@ -2093,16 +2105,11 @@
       "name": "lightxblazer 🐲",
       "text": "Morning!",
       "received_at": 1789557900
-    },
-    {
-      "name": "va3rjs-1 🇨🇦",
-      "text": "Good morning people of the Mesh😀",
-      "received_at": 1789556280
     }
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789639200,
+    "through": 1789642800,
     "hours": [
       [
         1789347600,
@@ -2295,10 +2302,22 @@
       [
         1789639200,
         2
+      ],
+      [
+        1789642800,
+        1
       ]
     ]
   },
   "arrivals": [
+    {
+      "name": "☀️Boston Valley 1W",
+      "position": [
+        42.64453,
+        -78.73897
+      ],
+      "first_seen": 1789643040
+    },
     {
       "name": "Louth Station",
       "position": [
@@ -2338,18 +2357,10 @@
         -80.43858
       ],
       "first_seen": 1789636080
-    },
-    {
-      "name": "County Rd 28",
-      "position": [
-        44.12323,
-        -77.37075
-      ],
-      "first_seen": 1789635060
     }
   ],
   "locations": {
-    "mapped": 220,
+    "mapped": 221,
     "unknown": 46
   }
 }
