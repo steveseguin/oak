@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789694724,
+  "published_at": 1789695624,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -1601,6 +1601,21 @@
   ],
   "messages": [
     {
+      "name": "K2MJLockport",
+      "text": "ping",
+      "received_at": 1789695600
+    },
+    {
+      "name": "K2MJLockport",
+      "text": "!ping",
+      "received_at": 1789695540
+    },
+    {
+      "name": "Beam",
+      "text": "Anyone try that enable repeat mode for companion???",
+      "received_at": 1789695360
+    },
+    {
       "name": "🫎Grace_Too",
       "text": "Greeting to all Meshkind!🛸",
       "received_at": 1789694160
@@ -2346,7 +2361,7 @@
       ],
       [
         1789693200,
-        1
+        4
       ]
     ]
   },
