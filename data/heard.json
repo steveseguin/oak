@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "published_at": 1789696524,
+  "published_at": 1789697424,
   "nodes": [
     {
       "name": "1KHZ.ORG S0",
@@ -117,8 +117,8 @@
     {
       "name": "Bayview Steeles NNE",
       "position": [
-        43.80382,
-        -79.39298
+        43.80237,
+        -79.39326
       ]
     },
     {
@@ -1601,6 +1601,21 @@
   ],
   "messages": [
     {
+      "name": "🛩️Q400 T-Deck",
+      "text": "@[Dee] hola",
+      "received_at": 1789696800
+    },
+    {
+      "name": "Bobabate 🅱️",
+      "text": "@[Dee] Howdy",
+      "received_at": 1789696740
+    },
+    {
+      "name": "Dee",
+      "text": "Allo",
+      "received_at": 1789696680
+    },
+    {
       "name": "Bobabate 🅱️",
       "text": "@[Beam] Not yet. Need a gathering.",
       "received_at": 1789695720
@@ -2133,7 +2148,7 @@
   ],
   "activity": {
     "since": 1789347600,
-    "through": 1789693200,
+    "through": 1789696800,
     "hours": [
       [
         1789347600,
@@ -2381,7 +2396,11 @@
       ],
       [
         1789693200,
-        8
+        10
+      ],
+      [
+        1789696800,
+        1
       ]
     ]
   },
