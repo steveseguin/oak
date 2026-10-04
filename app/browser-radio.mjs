@@ -56,7 +56,7 @@ function openHistory(key){return new Promise((resolve,reject)=>{
 });}
 export class BrowserRadio {
   constructor(link,mode){
-    this.link=link;this.mode=mode;this.phase='connected';this.contacts=[];this.channels=[];this.rows=[];this.nextId=1;this.stats={};this.queue=Promise.resolve();this.lastSend=0;this.draining=false;this.acks=new Map();
+    this.link=link;this.mode=mode;this.phase='connected';this.contacts=[];this.channels=[];this.rows=[];this.nextId=1;this.stats={};this.queue=Promise.resolve();this.lastSend=0;this.draining=false;this.pendingIncomingSave=false;this.acks=new Map();
     link.on('disconnected',()=>{this.phase='disconnected';});
     link.on(C.PushCodes.SendConfirmed,p=>{this.acks.set(p.ackCode,now());for(const row of this.rows)if(row.ack===p.ackCode&&now()-row.received_at<300)row.status='Acknowledged by recipient';this.save().catch(e=>{this.error=e.message;});});
     link.on(C.PushCodes.MsgWaiting,()=>{if(this.ready)this.drain().catch(e=>{this.error=e.message;});});
@@ -102,7 +102,11 @@ export class BrowserRadio {
   }
   async drain(){
     if(this.draining||this.phase!=='connected')return;this.draining=true;
-    try{for(let i=0;i<500;i++){
+    try{
+      // A failed write leaves the last consumed message in memory. Persist it
+      // before any later poll is allowed to consume another radio message.
+      if(this.pendingIncomingSave){await this.save();this.pendingIncomingSave=false;}
+      for(let i=0;i<500;i++){
       const p=await this.command(()=>this.link.sendCommandSyncNextMessage(),[C.ResponseCodes.ContactMsgRecv,C.ResponseCodes.ChannelMsgRecv,C.ResponseCodes.NoMoreMessages,C.ResponseCodes.ChannelDataRecv]);
       if(p.responseCode===C.ResponseCodes.NoMoreMessages)break;
       if(p.responseCode===C.ResponseCodes.ChannelDataRecv||p.txtType!==0)continue;
@@ -113,7 +117,7 @@ export class BrowserRadio {
       if(this.rows.some(r=>r.fingerprint===fingerprint))continue;
       this.rows.push({id:this.nextId++,conversation,sender,text,direction:'in',timestamp:p.senderTimestamp,received_at:now(),status:'Received',snr:p.snr,hops:p.pathLen===255?null:p.pathLen,provenance:'MeshCore RF',fingerprint});
       // Commit each drained message before asking the radio for another.
-      await this.save();
+      this.pendingIncomingSave=true;await this.save();this.pendingIncomingSave=false;
     }}finally{this.draining=false;}
   }
   save(){
@@ -139,7 +143,15 @@ export class BrowserRadio {
     const channel=this.channels.find(c=>c.id===body.conversation),contact=this.contacts.find(c=>'dm:'+c.public_key===body.conversation&&c.type===1);
     if(!channel&&!contact)throw new Error('Choose a configured channel or messaging contact.');
     const row={id:this.nextId++,conversation:body.conversation,sender:this.key,text:body.text,direction:'out',timestamp:Math.floor(now()),received_at:now(),status:'Sending',provenance:'MeshCore RF',request_id:body.request_id,snr:null,hops:null};
-    this.lastSend=now();this.rows.push(row);await this.save();
+    const previousSend=this.lastSend,sendStarted=now();
+    this.lastSend=sendStarted;this.rows.push(row);
+    try{await this.save();}catch(error){
+      // No radio command has run yet. Keep this failed attempt out of the
+      // request-ID success cache so the composer can retry its retained draft.
+      this.rows=this.rows.filter(saved=>saved!==row);
+      if(this.lastSend===sendStarted)this.lastSend=previousSend;
+      throw error;
+    }
     try{
       const reply=await this.command(()=>channel?this.link.sendCommandSendChannelTxtMsg(0,channel.index,row.timestamp,row.text):this.link.sendCommandSendTxtMsg(0,0,row.timestamp,bytes(contact.public_key),row.text),[channel?C.ResponseCodes.Ok:C.ResponseCodes.Sent]);
       row.status=channel?'Accepted by radio · group delivery unconfirmed':'Awaiting acknowledgement';
