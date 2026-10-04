@@ -51,6 +51,7 @@ Run sequential offline checks with Node 22+:
 ```sh
 node tests/check.cjs
 node tests/heard.cjs
+node tests/browser-radio.mjs
 node --check assets/profile-core.js
 node --check assets/profiles.js
 node --check assets/mesh-packets.js
